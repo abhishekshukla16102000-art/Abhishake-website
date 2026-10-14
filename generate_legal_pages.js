@@ -15,7 +15,7 @@ const pages = {
       <h2 class="text-xl font-bold mt-8 mb-4 text-slate-800">4. Data Security</h2>
       <p class="mb-4 text-slate-600 leading-relaxed">We take reasonable measures to help protect information about you from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction.</p>
       <h2 class="text-xl font-bold mt-8 mb-4 text-slate-800">5. Contact Us</h2>
-      <p class="mb-4 text-slate-600 leading-relaxed">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:abhishekshukla16102000@gmail.com" class="text-sky-600 hover:underline">abhishekshukla16102000@gmail.com</a>.</p>
+      <p class="mb-4 text-slate-600 leading-relaxed">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:abhishek@iabhishekshukla.com" class="text-sky-600 hover:underline">abhishek@iabhishekshukla.com</a>.</p>
     `
   },
   terms: {
