@@ -33,7 +33,7 @@ export function Collaborations() {
              </a>
            </div>
            <p className="text-slate-400 mt-10">
-             Direct Email: <a href="mailto:abhishekshukla16102000@gmail.com" className="text-[#0284c7] hover:underline">abhishekshukla16102000@gmail.com</a>
+             Direct Email: <a href="mailto:abhishek@iabhishekshukla.com" className="text-[#0284c7] hover:underline">abhishek@iabhishekshukla.com</a>
            </p>
         </div>
       </div>
