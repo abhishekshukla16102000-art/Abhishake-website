@@ -46,7 +46,17 @@ export function ServiceModal() {
         <h2 className="text-2xl font-bold text-[#0f172a] mb-1">Request Service</h2>
         <p className="text-[#0284c7] font-medium mb-6">{requestService}</p>
 
-        <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Request sent!"); closeModal(); }}>
+        <form className="space-y-4" onSubmit={(e) => {
+          e.preventDefault();
+          const form = e.currentTarget;
+          const data = new FormData(form);
+          const name = String(data.get("name") ?? "").trim();
+          const email = String(data.get("email") ?? "").trim();
+          const message = String(data.get("message") ?? "").trim();
+          const subject = encodeURIComponent(`Service request: ${requestService || "General enquiry"}`);
+          const body = encodeURIComponent(`Service: ${requestService || "General enquiry"}\nName: ${name}\nCustomer email: ${email}\n\nMessage:\n${message}`);
+          window.location.href = `mailto:abhishek@iabhishekshukla.com?subject=${subject}&body=${body}`;
+        }}>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
             <input 
@@ -75,6 +85,7 @@ export function ServiceModal() {
             ></textarea>
           </div>
           
+          <p className="text-xs text-slate-500">Submitting opens your email app with the request addressed to <a href="mailto:abhishek@iabhishekshukla.com" className="text-[#0284c7] underline">abhishek@iabhishekshukla.com</a>. You must press Send in your email app.</p>
           <button 
             type="submit"
             className="w-full py-3 mt-2 bg-[#0284c7] text-white font-semibold rounded-xl hover:bg-sky-600 transition shadow-lg shadow-sky-200"
