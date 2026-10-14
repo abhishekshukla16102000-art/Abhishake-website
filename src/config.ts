@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Abhishek Shukla',
   role: 'CX & AI Leader | Consultant | Project Leader | Author',
-  email: 'abhishekshukla16102000@gmail.com',
+  email: 'abhishek@iabhishekshukla.com',
   phone: '+91 8860220070',
   location: 'Delhi, India (Global Remote)',
   domain: 'iAbhishekShukla.com',
