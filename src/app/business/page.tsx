@@ -7,6 +7,7 @@ import {
   BarChart3,
   CheckCircle2,
   Compass,
+  Handshake,
   Mail,
   MapPin,
   Phone,
@@ -19,9 +20,9 @@ import {
 import { siteConfig } from "@/config";
 
 const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-  "Discuss a customer experience or operations challenge"
+  "Call Centre Partnership Discussion with SPS Nexus Tech"
 )}&body=${encodeURIComponent(
-  "Hello Abhishek,\n\nI would like to discuss a business improvement opportunity.\n\nCompany and role:\nArea to improve: customer experience, operations, or AI readiness\nCurrent challenge:\nWhat success would look like:\nPreferred time to connect:\n\nRegards,"
+  "Hello Abhishek,\n\nI would like to explore a potential partnership with SPS Nexus Tech around call centre operations and AI-enabled customer support.\n\nCompany and website:\nMy role:\nCurrent operations and capabilities:\nPotential partnership opportunity:\nPreferred next step:\n\nRegards,"
 )}`;
 
 export const metadata: Metadata = {
@@ -141,8 +142,8 @@ export default function BusinessLandingPage() {
             <a href="#services" className="text-sm font-medium text-slate-600 transition hover:text-sky-700">
               Services
             </a>
-            <a href="#approach" className="text-sm font-medium text-slate-600 transition hover:text-sky-700">
-              How it works
+            <a href="#partnership" className="text-sm font-medium text-slate-600 transition hover:text-sky-700">
+              Partnership
             </a>
             <a href="#about" className="text-sm font-medium text-slate-600 transition hover:text-sky-700">
               About
@@ -153,8 +154,8 @@ export default function BusinessLandingPage() {
             href={inquiryHref}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 sm:px-5"
           >
-            <span className="hidden sm:inline">Discuss a challenge</span>
-            <span className="sm:hidden">Contact</span>
+            <span className="hidden sm:inline">Partner with us</span>
+            <span className="sm:hidden">Partner</span>
             <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         </div>
@@ -194,7 +195,7 @@ export default function BusinessLandingPage() {
                 href={inquiryHref}
                 className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-sky-500 px-6 py-3.5 font-semibold text-slate-950 shadow-lg shadow-sky-950/30 transition hover:-translate-y-0.5 hover:bg-sky-300"
               >
-                Discuss your business challenge
+                Discuss a Call Centre Partnership
                 <ArrowRight size={18} className="transition group-hover:translate-x-1" aria-hidden="true" />
               </a>
               <a
@@ -281,6 +282,89 @@ export default function BusinessLandingPage() {
                 <p className="text-sm font-medium leading-6 text-slate-700">{item}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="partnership" className="scroll-mt-24 overflow-hidden border-y border-slate-200 bg-slate-950 px-5 py-20 text-white sm:px-8 sm:py-24">
+        <div className="pointer-events-none absolute" aria-hidden="true" />
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-300">Partnership opportunity</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              Build better customer support together.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+              SPS Nexus Tech is exploring partnerships with call centre operators, BPO companies, and technology providers to shape and validate practical AI-enabled customer support. The goal is to combine operational experience, human expertise, and appropriate AI in ways that can be tested and measured.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <a href={inquiryHref} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:bg-sky-300">
+                Discuss a Call Centre Partnership <ArrowRight size={17} aria-hidden="true" />
+              </a>
+              <a href="#services" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3.5 font-semibold text-white transition hover:border-white/40 hover:bg-white/[0.06]">
+                Explore consulting services
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                icon: Users,
+                title: "Call centre and BPO operators",
+                text: "Bring real customer service workflows, agent experience, and operational insight. Together we can identify a suitable first use case and agree how service quality should be measured."
+              },
+              {
+                icon: Workflow,
+                title: "AI and technology partners",
+                text: "Explore how tools, integrations, knowledge resources, and human handoffs could support a practical customer service workflow. Fit and feasibility would be reviewed before selecting technology."
+              },
+              {
+                icon: BarChart3,
+                title: "Pilot-first collaboration",
+                text: "Start with a clearly scoped problem, agreed responsibilities, suitable privacy and quality controls, and baseline measures. Review what changes before making decisions about wider rollout."
+              }
+            ].map((item) => {
+              const Icon = item.icon;
+              return (
+                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:p-7">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-sky-300/20 bg-sky-300/10 text-sky-200">
+                    <Icon size={23} aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-slate-300">{item.text}</p>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-sky-300/20 bg-sky-300/[0.06] p-6 sm:p-8">
+            <div className="flex items-start gap-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-300/10 text-sky-200">
+                <Handshake size={22} aria-hidden="true" />
+              </span>
+              <div>
+                <h3 className="text-xl font-semibold text-white sm:text-2xl">A proposed AI plus human roadmap</h3>
+                <div className="mt-5 grid gap-5 md:grid-cols-3">
+                  <div>
+                    <p className="text-sm font-bold text-sky-200">Phase 1</p>
+                    <p className="mt-2 text-base font-semibold text-white">Support human agents</p>
+                    <p className="mt-2 text-base leading-7 text-slate-300">Evaluate AI assistance for knowledge access, response drafting, and routine agent tasks while people remain in control.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-sky-200">Phase 2</p>
+                    <p className="mt-2 text-base font-semibold text-white">Improve context and handoffs</p>
+                    <p className="mt-2 text-base leading-7 text-slate-300">Explore ways to preserve conversation context and give human agents a clearer summary when a case needs attention.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-sky-200">Phase 3</p>
+                    <p className="mt-2 text-base font-semibold text-white">Automate suitable routine tasks</p>
+                    <p className="mt-2 text-base leading-7 text-slate-300">Consider higher automation only for appropriate interactions, with quality checks and a clear path to human support.</p>
+                  </div>
+                </div>
+                <p className="mt-5 text-sm leading-6 text-slate-400">This is a proposed direction to evaluate with partners, not a claim that a finished AI call centre product is already available. Scope, capability, and readiness would need to be validated before a pilot.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
