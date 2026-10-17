@@ -306,7 +306,7 @@ export default function BusinessLandingPage() {
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-50 text-sky-700 transition group-hover:bg-sky-700 group-hover:text-white">
                       <Icon size={23} aria-hidden="true" />
                     </span>
-                    <span className="text-[10px] font-bold tracking-[0.17em] text-slate-400 sm:text-xs">{service.eyebrow}</span>
+                    <span className="text-xs font-bold tracking-[0.12em] text-slate-400">{service.eyebrow}</span>
                   </div>
                   <h3 className="mt-6 text-xl font-semibold leading-snug tracking-tight text-slate-950 sm:text-2xl">{service.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">{service.description}</p>
