@@ -19,23 +19,23 @@ import {
 import { siteConfig } from "@/config";
 
 const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-  "Business improvement discussion"
+  "Discuss a customer experience or operations challenge"
 )}&body=${encodeURIComponent(
-  "Hi Abhishek,\n\nI'd like to discuss a customer experience, operations, or AI adoption challenge.\n\nBusiness / team:\nCurrent challenge:\nWhat we'd like to improve:\n\nRegards,"
+  "Hello Abhishek,\n\nI would like to discuss a business improvement opportunity.\n\nCompany and role:\nArea to improve: customer experience, operations, or AI readiness\nCurrent challenge:\nWhat success would look like:\nPreferred time to connect:\n\nRegards,"
 )}`;
 
 export const metadata: Metadata = {
-  title: "Customer Experience, Operations & Practical AI Consulting | Abhishek Shukla",
+  title: "Customer Experience and Operations Consulting | Practical AI | Abhishek Shukla",
   description:
-    "Work with Abhishek Shukla to identify customer-support friction, improve operational workflows, and assess where AI can deliver practical value. Start with the business problem.",
+    "Practical consulting for customer support, contact centre operations, process improvement, and AI readiness. Find friction, prioritize opportunities, and build a clear action plan.",
   alternates: { canonical: "/business" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://iabhishekshukla.com/business",
-    title: "Improve Customer Operations | Abhishek Shukla",
+    title: "Improve Customer Experience and Operations | Abhishek Shukla",
     description:
-      "A practical, human-centred approach to customer experience, operational improvement, and AI adoption.",
+      "Helping business teams improve customer service, simplify operations, and identify responsible, practical uses for AI.",
     siteName: "iAbhishekShukla.com",
   },
 };
@@ -44,37 +44,37 @@ const serviceCards = [
   {
     icon: Users,
     eyebrow: "CUSTOMER EXPERIENCE",
-    title: "Customer support & service operations",
+    title: "Customer experience and contact centre performance",
     description:
-      "Find the points where customers, agents, and teams lose time or context—and define practical ways to improve the experience.",
+      "Find where customers repeat themselves, cases escalate, or teams lose time during handoffs. Turn those friction points into practical service improvements.",
     deliverables: [
-      "Customer journey and handoff review",
-      "Repeat-contact, escalation, and knowledge-gap analysis",
-      "Clear service-quality measures to track",
+      "Customer journey, interaction, and handoff review",
+      "Review of repeat contacts, escalations, quality gaps, and missing knowledge",
+      "Relevant measures such as resolution, quality, service levels, and customer feedback",
     ],
   },
   {
     icon: Sparkles,
     eyebrow: "PRACTICAL AI",
-    title: "AI opportunity & readiness assessment",
+    title: "AI readiness and use case prioritization",
     description:
-      "Identify where AI assistance may help, where a simpler process change is better, and where human judgement must stay central.",
+      "Prioritize AI use cases by business value, readiness, data quality, risk, and the need for human judgement. Avoid investing in automation before the workflow is ready.",
     deliverables: [
-      "Use-case shortlist based on business value and readiness",
-      "Knowledge, workflow, data, and oversight considerations",
-      "Prioritized next steps before committing to tools",
+      "A ranked list of use cases based on value, feasibility, and readiness",
+      "Requirements for knowledge, workflow, data, privacy, and human oversight",
+      "A practical pilot recommendation before larger investment",
     ],
   },
   {
     icon: Workflow,
     eyebrow: "OPERATIONS",
-    title: "Process & performance improvement",
+    title: "Workflow and operational performance improvement",
     description:
-      "Make work easier to understand, manage, and improve with clearer workflows, roles, operating practices, and measures.",
+      "Reduce avoidable complexity by clarifying workflows, role ownership, standard operating practices, and performance measures.",
     deliverables: [
-      "Current-state workflow and friction-point map",
-      "Improvement opportunities ranked by effort and value",
-      "A practical action plan with owners and measures",
+      "A map of the current workflow, delays, rework, and handoff issues",
+      "Improvement actions prioritized by likely value and effort",
+      "An action plan with owners, milestones, and performance measures",
     ],
   },
 ];
@@ -84,36 +84,36 @@ const steps = [
     number: "01",
     title: "Understand the challenge",
     description:
-      "Align on the business goal, customer or team impact, constraints, and what a useful outcome would look like.",
+      "Clarify the business goal, affected teams and customers, current constraints, and how progress will be evaluated.",
   },
   {
     number: "02",
     title: "Review the current state",
     description:
-      "Work from the process, team input, and available evidence—not assumptions or a pre-selected technology.",
+      "Review workflows, team input, and available evidence before recommending a process change or technology.",
   },
   {
     number: "03",
     title: "Agree on the next steps",
     description:
-      "Set priorities, owners, practical measures, and a realistic route to test improvements.",
+      "Agree on the first priorities, responsible owners, success measures, and a realistic way to test improvements.",
   },
 ];
 
 const principles = [
   {
     icon: Target,
-    title: "Diagnose before prescribing",
+    title: "Business need before technology",
     text: "Choose the approach after the problem and operating context are clear.",
   },
   {
     icon: ShieldCheck,
-    title: "Keep people accountable",
+    title: "Keep people in control",
     text: "Consider human review, quality, risk, and customer impact when evaluating AI.",
   },
   {
     icon: BarChart3,
-    title: "Define how to measure progress",
+    title: "Measure what changes",
     text: "Agree on baseline measures before promising outcomes or scaling a solution.",
   },
 ];
@@ -179,14 +179,14 @@ export default function BusinessLandingPage() {
             </div>
 
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
-              Improve customer operations
+              Improve customer service. Strengthen operations.
               <span className="mt-1 block bg-gradient-to-r from-sky-300 via-cyan-200 to-indigo-300 bg-clip-text text-transparent">
-                before you buy another tool.
+                use AI where it makes business sense.
               </span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              I help customer-support and operations teams uncover friction, improve workflows, and assess where AI can add practical value—starting with the business problem, not a pre-selected technology.
+              I work with customer support, contact centre, BPO, and operations leaders to identify avoidable friction, improve service workflows, and decide where AI can help. You get a clearer view of the problem and a practical plan for what to improve first.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -201,13 +201,13 @@ export default function BusinessLandingPage() {
                 href="#services"
                 className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[0.04] px-6 py-3.5 font-semibold text-white transition hover:border-white/40 hover:bg-white/[0.08]"
               >
-                Explore services
+                See how I can help
               </a>
             </div>
 
             <div className="mt-8 flex flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:flex-wrap sm:gap-x-6">
-              <span className="inline-flex items-center gap-2"><CheckCircle2 size={16} className="text-sky-300" /> Practical, scoped recommendations</span>
-              <span className="inline-flex items-center gap-2"><CheckCircle2 size={16} className="text-sky-300" /> Human-centred by design</span>
+              <span className="inline-flex items-center gap-2"><CheckCircle2 size={16} className="text-sky-300" /> Clear priorities tied to a business goal</span>
+              <span className="inline-flex items-center gap-2"><CheckCircle2 size={16} className="text-sky-300" /> Human oversight remains central</span>
             </div>
           </div>
 
@@ -216,8 +216,8 @@ export default function BusinessLandingPage() {
             <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-slate-900/90 p-5 shadow-2xl shadow-black/30 sm:p-7">
               <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.17em] text-sky-300">A practical path forward</p>
-                  <h2 className="mt-2 text-xl font-semibold tracking-tight sm:text-2xl">From friction to focused action</h2>
+                  <p className="text-xs font-semibold uppercase tracking-[0.17em] text-sky-300">A clear route to improvement</p>
+                  <h2 className="mt-2 text-xl font-semibold tracking-tight sm:text-2xl">What your team can gain</h2>
                 </div>
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-sky-300/20 bg-sky-300/10 text-sky-200">
                   <Compass size={25} aria-hidden="true" />
@@ -226,9 +226,9 @@ export default function BusinessLandingPage() {
 
               <div className="mt-5 space-y-3">
                 {[
-                  { number: "01", title: "Understand the workflow", text: "Where do customers or teams lose time, clarity, or context?" },
-                  { number: "02", title: "Prioritize what matters", text: "Which changes are useful, feasible, and proportionate to the risk?" },
-                  { number: "03", title: "Define the next steps", text: "What should change—and how will progress be measured?" },
+                  { number: "01", title: "Pinpoint the friction", text: "Identify where service, handoffs, or everyday work breaks down." },
+                  { number: "02", title: "Prioritize the opportunities", text: "Focus on changes that are useful, achievable, and proportionate to risk." },
+                  { number: "03", title: "Build an action plan", text: "Set practical next steps, owners, and measures of progress." },
                 ].map((item) => (
                   <div key={item.number} className="flex gap-4 rounded-2xl border border-white/[0.08] bg-white/[0.035] p-4 transition hover:border-sky-300/25 hover:bg-white/[0.055]">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-xs font-bold text-sky-200">{item.number}</span>
@@ -243,7 +243,7 @@ export default function BusinessLandingPage() {
               <div className="mt-5 flex items-start gap-3 rounded-2xl bg-sky-300/[0.08] p-4">
                 <ShieldCheck className="mt-0.5 shrink-0 text-sky-200" size={20} aria-hidden="true" />
                 <p className="text-sm leading-6 text-slate-300">
-                  <span className="font-semibold text-white">People + process + data + AI.</span> Use the right mix for the challenge—not automation for its own sake.
+                  <span className="font-semibold text-white">People, process, data, and AI.</span> Choose the right mix for the business need, not automation for its own sake.
                 </p>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function BusinessLandingPage() {
               </div>
               <div className="min-w-0">
                 <p className="font-semibold text-white">Abhishek Shukla</p>
-                <p className="mt-0.5 text-xs leading-5 text-slate-400">Founder, SPS Nexus Tech · CX & AI leader</p>
+                <p className="mt-0.5 text-xs leading-5 text-slate-400">Founder at SPS Nexus Tech<br />Customer Experience and AI Consultant</p>
               </div>
             </div>
           </div>
@@ -263,9 +263,9 @@ export default function BusinessLandingPage() {
       <section className="border-b border-slate-200 bg-slate-50 px-5 py-8 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            "Start with the actual business problem",
-            "Recommendations matched to your context",
-            "Human oversight and responsible AI considered",
+            "Start with the business problem",
+            "Advice tailored to your operating context",
+            "Responsible AI and human oversight",
             "Progress measures agreed before rollout",
           ].map((item, index) => (
             <div key={item} className="flex items-start gap-3 text-sm font-medium leading-6 text-slate-700">
@@ -283,10 +283,10 @@ export default function BusinessLandingPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">Business services</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
-              Start where the friction is.
+              Solve the problems that slow your team down.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              A focused engagement can help clarify the problem, establish priorities, and create a realistic plan before you commit to a larger change.
+              Whether the challenge is rising repeat contacts, inconsistent service, manual work, or uncertainty about AI, the first step is to understand the causes and agree what is worth improving.
             </p>
           </div>
 
@@ -332,13 +332,13 @@ export default function BusinessLandingPage() {
           <div className="max-w-xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">How it works</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-4xl">
-              Clear thinking before costly commitments.
+              Make a better decision before committing time or budget.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              The first conversation is about understanding your context. It is not a commitment to buy a tool or launch a large transformation.
+              We will discuss your current process, what is not working, what you have already tried, and what a useful result would look like. From there, we can determine whether a short assessment, process improvement, or AI readiness review is the right next step.
             </p>
             <a href={inquiryHref} className="mt-7 inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 font-semibold text-white transition hover:bg-slate-800">
-              Talk through the challenge <ArrowRight size={17} aria-hidden="true" />
+              Discuss your challenge <ArrowRight size={17} aria-hidden="true" />
             </a>
           </div>
 
@@ -361,7 +361,7 @@ export default function BusinessLandingPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">A grounded approach</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Useful recommendations—not AI theatre.
+              Practical improvement, not AI for appearances.
             </h2>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -394,14 +394,14 @@ export default function BusinessLandingPage() {
           <div className="min-w-0 text-center md:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">Your point of contact</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Abhishek Shukla</h2>
-            <p className="mt-3 text-base font-semibold leading-7 text-slate-800 sm:text-lg">Founder, SPS Nexus Tech · CX & AI Leader · Consultant · Project Leader · Author</p>
+            <p className="mt-3 text-base font-semibold leading-7 text-slate-800 sm:text-lg">Founder at SPS Nexus Tech. Customer Experience and AI Leader. Consultant, Project Leader, and Author.</p>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-              I work at the intersection of customer experience, operations, data, practical AI, and human-centred leadership. My focus is to understand the real business challenge and help teams define practical, measurable next steps.
+              I bring together customer experience, service operations, process improvement, data, and practical AI to help teams make informed decisions. The focus is always on business needs, people, and changes that can be tested and measured.
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
               <span className="rounded-full bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-900 ring-1 ring-sky-100">7+ years of experience</span>
-              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Thinkers360 Top 50 — AI Ethics</span>
-              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Top 50 — Customer Loyalty</span>
+              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Thinkers360 Top 50: AI Ethics</span>
+              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Top 50: Customer Loyalty</span>
               <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Author, The Bridge You Become</span>
             </div>
             <div className="mt-6 grid gap-3 border-t border-slate-100 pt-5 text-left sm:grid-cols-2">
@@ -436,10 +436,10 @@ export default function BusinessLandingPage() {
           <div className="max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-300 sm:text-sm">Start a conversation</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Bring the business problem. Let’s work out the right next step.
+              Tell me what your business needs to improve.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              Share what your team is trying to improve. We can determine whether an assessment, process change, AI use-case review, or another approach makes the most sense.
+              Briefly describe your challenge and the outcome you are aiming for. We can discuss whether a focused assessment, workflow improvement, or AI readiness review is the most useful next step.
             </p>
           </div>
           <div className="w-full rounded-3xl border border-white/10 bg-white/[0.05] p-6 sm:p-8 lg:min-w-[320px]">
@@ -461,10 +461,10 @@ export default function BusinessLandingPage() {
               </div>
             </div>
             <a href={inquiryHref} className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-400 px-5 py-3.5 font-semibold text-slate-950 transition hover:bg-sky-300">
-              Email your challenge <ArrowRight size={17} aria-hidden="true" />
+              Start a business conversation <ArrowRight size={17} aria-hidden="true" />
             </a>
             <p className="mt-4 text-xs leading-5 text-slate-400">
-              This opens your email app with a draft. You will need to press Send there.
+              Your email app will open with a draft. Review it and press Send to contact me.
             </p>
           </div>
         </div>
