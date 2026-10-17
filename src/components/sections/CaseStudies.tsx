@@ -15,7 +15,7 @@ export function CaseStudies() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+          <div className="card-3d bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 shadow-lg">
             <p className="text-xs font-bold uppercase tracking-wider text-sky-400 mb-3">
               Illustrative example
             </p>
@@ -31,7 +31,7 @@ export function CaseStudies() {
             </p>
           </div>
 
-          <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-center">
+          <div className="card-3d bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 shadow-lg flex flex-col justify-center">
             <h3 className="text-xl font-bold mb-4">What you can expect</h3>
             <ul className="space-y-4 text-slate-300">
               <li><strong className="text-white">A clear problem statement</strong><br />Align stakeholders on what needs to improve and why.</li>
