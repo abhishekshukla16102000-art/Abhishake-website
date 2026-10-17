@@ -24,12 +24,15 @@ export function Credentials() {
                 const card = (
                   <div className="h-full bg-white p-6 rounded-3xl shadow-sm border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all flex flex-col items-center text-center group">
                     <div className="w-32 h-32 relative mb-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
-                      {badge.remoteImage ? (
+                      {badge.href === "https://www.thinkers360.com/tl/badge/33328/9210" ? (
                         <div
                           role="img"
                           aria-label={badge.name}
                           className="h-full w-full bg-contain bg-center bg-no-repeat"
-                          style={{ backgroundImage: `url("${badge.remoteImage}")` }}
+                          style={{
+                            backgroundImage:
+                              'url("https://www.thinkers360.com/tl/assets/images/badges/top50/Top%2050%20-%20Customer%20Loyalty.png")',
+                          }}
                         />
                       ) : badge.image ? (
                         <Image src={badge.image} alt={badge.name} fill className="object-contain" />
