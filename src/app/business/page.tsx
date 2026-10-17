@@ -8,6 +8,8 @@ import {
   CheckCircle2,
   Compass,
   Mail,
+  MapPin,
+  Phone,
   ShieldCheck,
   Sparkles,
   Target,
@@ -251,7 +253,7 @@ export default function BusinessLandingPage() {
               </div>
               <div className="min-w-0">
                 <p className="font-semibold text-white">Abhishek Shukla</p>
-                <p className="mt-0.5 text-xs text-slate-400">CX & AI consultant · Project leader · Author</p>
+                <p className="mt-0.5 text-xs leading-5 text-slate-400">Founder, SPS Nexus Tech · CX & AI leader</p>
               </div>
             </div>
           </div>
@@ -380,20 +382,51 @@ export default function BusinessLandingPage() {
       </section>
 
       <section id="about" className="scroll-mt-24 border-y border-slate-200 bg-slate-50 px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-[auto_1fr] md:gap-12">
-          <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-[2rem] border-4 border-white shadow-xl ring-1 ring-slate-200 sm:h-40 sm:w-40">
-            <Image src={siteConfig.profileImage} alt={siteConfig.name} fill sizes="(max-width: 640px) 128px, 160px" className="object-cover object-top" />
-          </div>
-          <div className="text-center md:text-left">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">Your point of contact</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">Abhishek Shukla</h2>
-            <p className="mt-2 font-medium text-slate-700">Customer experience · AI adoption · Operations · Project leadership</p>
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-              My approach brings together customer experience, process thinking, data, practical AI, and human-centred leadership. The aim is to understand what is happening today and help define the next useful step for your team.
-            </p>
-            <a href={siteConfig.social.linkedin} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 font-semibold text-sky-800 hover:text-sky-600">
-              View professional profile <ArrowUpRight size={16} aria-hidden="true" />
+        <div className="mx-auto grid max-w-6xl items-start gap-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8 md:grid-cols-[auto_1fr] md:gap-10 lg:p-10">
+          <div className="mx-auto md:mx-0">
+            <div className="relative h-36 w-36 overflow-hidden rounded-[1.75rem] border-4 border-white bg-slate-100 shadow-xl ring-1 ring-slate-200 sm:h-44 sm:w-44">
+              <Image src={siteConfig.profileImage} alt={siteConfig.name} fill sizes="(max-width: 640px) 144px, 176px" className="object-cover object-top" />
+            </div>
+            <a href={siteConfig.social.linkedin} target="_blank" rel="noreferrer" className="mt-4 flex items-center justify-center gap-2 rounded-full border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-sky-300 hover:text-sky-800 md:w-full">
+              LinkedIn profile <ArrowUpRight size={16} aria-hidden="true" />
             </a>
+          </div>
+          <div className="min-w-0 text-center md:text-left">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">Your point of contact</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Abhishek Shukla</h2>
+            <p className="mt-3 text-base font-semibold leading-7 text-slate-800 sm:text-lg">Founder, SPS Nexus Tech · CX & AI Leader · Consultant · Project Leader · Author</p>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
+              I work at the intersection of customer experience, operations, data, practical AI, and human-centred leadership. My focus is to understand the real business challenge and help teams define practical, measurable next steps.
+            </p>
+            <div className="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
+              <span className="rounded-full bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-900 ring-1 ring-sky-100">7+ years of experience</span>
+              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Thinkers360 Top 50 — AI Ethics</span>
+              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Top 50 — Customer Loyalty</span>
+              <span className="rounded-full bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Author, The Bridge You Become</span>
+            </div>
+            <div className="mt-6 grid gap-3 border-t border-slate-100 pt-5 text-left sm:grid-cols-2">
+              <div className="flex min-w-0 items-start gap-3 rounded-xl bg-slate-50 p-3.5">
+                <MapPin size={18} className="mt-0.5 shrink-0 text-sky-700" aria-hidden="true" />
+                <div className="min-w-0">
+                  <p className="text-xs font-medium text-slate-500">Location</p>
+                  <p className="mt-1 text-sm font-semibold leading-5 text-slate-800">{siteConfig.location}</p>
+                </div>
+              </div>
+              <a href={`tel:${siteConfig.phone.replace(/[^\\d+]/g, "")}`} className="flex min-w-0 items-start gap-3 rounded-xl bg-slate-50 p-3.5 transition hover:bg-sky-50">
+                <Phone size={18} className="mt-0.5 shrink-0 text-sky-700" aria-hidden="true" />
+                <div className="min-w-0">
+                  <p className="text-xs font-medium text-slate-500">Phone</p>
+                  <p className="mt-1 break-words text-sm font-semibold leading-5 text-slate-800">{siteConfig.phone}</p>
+                </div>
+              </a>
+              <a href={`mailto:${siteConfig.email}`} className="flex min-w-0 items-start gap-3 rounded-xl bg-slate-50 p-3.5 transition hover:bg-sky-50 sm:col-span-2">
+                <Mail size={18} className="mt-0.5 shrink-0 text-sky-700" aria-hidden="true" />
+                <div className="min-w-0">
+                  <p className="text-xs font-medium text-slate-500">Business enquiries</p>
+                  <p className="mt-1 break-all text-sm font-semibold leading-5 text-slate-800">{siteConfig.email}</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -417,6 +450,16 @@ export default function BusinessLandingPage() {
             <a href={`mailto:${siteConfig.email}`} className="mt-1 block break-all text-lg font-semibold text-white underline decoration-sky-400/50 underline-offset-4 hover:decoration-sky-300">
               {siteConfig.email}
             </a>
+            <div className="mt-5 space-y-4 border-t border-white/10 pt-5">
+              <div>
+                <p className="text-sm text-slate-400">Phone</p>
+                <a href={`tel:${siteConfig.phone.replace(/[^\\d+]/g, "")}`} className="mt-1 block font-semibold text-white underline decoration-sky-400/50 underline-offset-4 hover:decoration-sky-300">{siteConfig.phone}</a>
+              </div>
+              <div className="flex items-start gap-2 text-sm leading-6 text-slate-300">
+                <MapPin size={17} className="mt-1 shrink-0 text-sky-300" aria-hidden="true" />
+                <span>{siteConfig.location}</span>
+              </div>
+            </div>
             <a href={inquiryHref} className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-400 px-5 py-3.5 font-semibold text-slate-950 transition hover:bg-sky-300">
               Email your challenge <ArrowRight size={17} aria-hidden="true" />
             </a>
