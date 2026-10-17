@@ -18,6 +18,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { siteConfig } from "@/config";
+import PartnershipEnquiryCards from "@/components/PartnershipEnquiryCards";
 
 const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
   "Call Centre Partnership Discussion with SPS Nexus Tech"
@@ -306,36 +307,7 @@ export default function BusinessLandingPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {[
-              {
-                icon: Users,
-                title: "Call centre and BPO operators",
-                text: "Bring real customer service workflows, agent experience, and operational insight. Together we can identify a suitable first use case and agree how service quality should be measured."
-              },
-              {
-                icon: Workflow,
-                title: "AI and technology partners",
-                text: "Explore how tools, integrations, knowledge resources, and human handoffs could support a practical customer service workflow. Fit and feasibility would be reviewed before selecting technology."
-              },
-              {
-                icon: BarChart3,
-                title: "Pilot-first collaboration",
-                text: "Start with a clearly scoped problem, agreed responsibilities, suitable privacy and quality controls, and baseline measures. Review what changes before making decisions about wider rollout."
-              }
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:p-7">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-sky-300/20 bg-sky-300/10 text-sky-200">
-                    <Icon size={23} aria-hidden="true" />
-                  </span>
-                  <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
-                  <p className="mt-3 text-base leading-7 text-slate-300">{item.text}</p>
-                </article>
-              );
-            })}
-          </div>
+          <PartnershipEnquiryCards />
 
           <div className="mt-8 rounded-2xl border border-sky-300/20 bg-sky-300/[0.06] p-6 sm:p-8">
             <div className="flex items-start gap-4">
