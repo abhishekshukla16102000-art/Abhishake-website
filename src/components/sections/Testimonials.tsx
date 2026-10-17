@@ -1,10 +1,8 @@
 import {
   ArrowUpRight,
-  BadgeCheck,
-  Globe2,
-  Linkedin,
   Mail,
-  MessageSquareQuote,
+  ShieldCheck,
+  Users,
 } from "lucide-react";
 import { siteConfig } from "@/config";
 
@@ -16,7 +14,7 @@ const feedbackHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
 
 const feedbackDestinations = [
   {
-    icon: Linkedin,
+    icon: Users,
     eyebrow: "PROFESSIONAL RECOMMENDATIONS",
     title: "Read recommendations on LinkedIn",
     description:
@@ -25,7 +23,7 @@ const feedbackDestinations = [
     href: siteConfig.social.linkedin,
   },
   {
-    icon: BadgeCheck,
+    icon: ShieldCheck,
     eyebrow: "CREDENTIALS & RECOGNITION",
     title: "Explore the Thinkers360 profile",
     description:
@@ -34,7 +32,7 @@ const feedbackDestinations = [
     href: siteConfig.social.thinkers360,
   },
   {
-    icon: Globe2,
+    icon: ArrowUpRight,
     eyebrow: "VISIT THE WEBSITE",
     title: "Open the live website",
     description:
@@ -107,7 +105,7 @@ export function Testimonials() {
         <div className="mt-8 flex flex-col items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
           <div className="flex items-start gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
-              <MessageSquareQuote size={21} aria-hidden="true" />
+              <Mail size={21} aria-hidden="true" />
             </span>
             <div>
               <h3 className="font-semibold text-slate-950">
