@@ -27,11 +27,11 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <CredibilityStrip />
-        <AudiencePathways />
         <OrganizationSolutions />
         <Methodology />
         <CaseStudies />
         <AIPhilosophy />
+        <AudiencePathways />
         <ProfessionalServices />
         <TalentHiring />
         <WhyItMatters />
