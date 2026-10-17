@@ -1,23 +1,23 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { 
-  Hero, 
-  CredibilityStrip, 
-  AudiencePathways, 
-  WhyItMatters, 
-  OrganizationSolutions, 
-  ProfessionalServices, 
-  TalentHiring, 
-  Methodology, 
-  AIPhilosophy, 
-  LeadershipArchitecture, 
-  CaseStudies, 
-  Testimonials, 
-  ResourceHub, 
-  PublishedBook, 
-  Insights, 
+import {
+  Hero,
+  CredibilityStrip,
+  AudiencePathways,
+  WhyItMatters,
+  OrganizationSolutions,
+  ProfessionalServices,
+  TalentHiring,
+  Methodology,
+  AIPhilosophy,
+  LeadershipArchitecture,
+  CaseStudies,
+  Testimonials,
+  ResourceHub,
+  PublishedBook,
+  Insights,
   Credentials,
-  Collaborations 
+  Collaborations,
 } from "@/components/sections";
 
 export default function Home() {
@@ -27,17 +27,16 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <CredibilityStrip />
-        <Credentials />
         <AudiencePathways />
-        <WhyItMatters />
         <OrganizationSolutions />
+        <Methodology />
+        <CaseStudies />
+        <AIPhilosophy />
         <ProfessionalServices />
         <TalentHiring />
-        <Methodology />
-        <AIPhilosophy />
+        <WhyItMatters />
         <LeadershipArchitecture />
-        <CaseStudies />
-        <Testimonials />
+        <Credentials />
         <ResourceHub />
         <PublishedBook />
         <Insights />
