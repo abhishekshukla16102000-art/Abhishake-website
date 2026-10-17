@@ -46,7 +46,7 @@ export function Hero() {
 
           <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             I help organizations improve customer-support operations, streamline workflows, and identify where AI can genuinely help their teams.
-            The starting point is always the business problem—not a tool or trend.
+            We start with the business problem and choose the right solution based on your needs.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
