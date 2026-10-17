@@ -35,7 +35,7 @@ export function Credentials() {
                           <div className="flex h-14 w-14 items-center justify-center rounded-full border border-amber-300/70 bg-white/5 text-amber-300">
                             <Award size={32} strokeWidth={1.6} aria-hidden="true" />
                           </div>
-                          <span className="mt-2 text-[10px] font-bold tracking-[0.18em] text-sky-100">TOP 50</span>
+                          <span className="mt-2 text-xs font-bold tracking-normal text-sky-100">TOP 50</span>
                         </div>
                       ) : (
                         <div className="w-full h-full bg-slate-100 rounded-full flex items-center justify-center text-slate-400">Badge</div>
@@ -55,7 +55,7 @@ export function Credentials() {
                     href={badge.href}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`${badge.name} — view official Thinkers360 credential`}
+                    aria-label={`${badge.name}: view official Thinkers360 credential`}
                     className="block h-full rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2"
                   >
                     {card}
