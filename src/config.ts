@@ -22,7 +22,7 @@ export const siteConfig = {
     name: 'Abhishek Shukla',
     subtitle: 'CX & AI Leader | Consultant | Project Leader | Author',
     headline: 'Better customer experiences. Smarter operations. Practical AI.',
-    supporting: 'I help organizations improve customer-support operations, streamline workflows, and identify where AI can genuinely help their teams. The starting point is always the business problem—not a tool or trend.',
+    supporting: 'I help organizations improve customer support, streamline workflows, and identify where AI can genuinely help their teams. We start with the business problem and choose the right solution based on your needs.',
     cta1: { text: 'Discuss a Business Challenge', href: '#contact' },
     cta2: { text: 'Explore Business Services', href: '/business' },
     cta3: { text: 'Collaborate With Me', href: '#collaborations' }
@@ -74,7 +74,7 @@ export const siteConfig = {
     }
   },
   positioning: {
-    statement: '"I help organizations improve customer experience, operational performance and workplace productivity by bringing together AI, data, process thinking and human-centered leadership."',
+    statement: 'I help organizations improve customer experience, operational performance, and workplace productivity by combining AI, data, process improvement, and human-centred leadership.',
     expanded: 'I work at the intersection of: Customer Experience + Artificial Intelligence + Operations + Data + Leadership. The focus is not technology for the sake of technology; it is identifying the real problem, understanding people and processes, and determining where AI, data, process improvement, or leadership creates practical value.'
   },
   orgServices: {
@@ -110,7 +110,7 @@ export const siteConfig = {
     ctaButton: 'Discuss a Business Challenge'
   },
   talentHiring: {
-    headline: 'Helping Organizations Find the Right Talent — And Helping Professionals Become Ready for the Right Opportunity.',
+    headline: 'Helping organizations hire thoughtfully and helping professionals prepare for the right opportunities.',
     orgSupport: [
       'Role requirement & competency understanding',
       'Job-description (JD) refinement',
@@ -120,7 +120,7 @@ export const siteConfig = {
       'AI-assisted recruitment workflows',
       'Operations/CX/AI specialized role hiring'
     ],
-    guardrail: 'NEVER promise: "Guaranteed hiring" or "Guaranteed candidates". INSTEAD position as: Structured hiring support designed to help organizations identify, assess, and onboard relevant talent more effectively and objectively.'
+    guardrail: 'Structured hiring support helps organizations define role requirements, assess candidates consistently, and make more informed hiring decisions. Final selection and hiring outcomes remain with the employer.'
   },
   professionalServices: {
     services: [
@@ -142,12 +142,12 @@ export const siteConfig = {
     ]
   },
   aiPhilosophy: {
-    quote: '"AI Should Improve the Experience — Not Replace the Human."',
-    formula: 'People + Process + Data + AI Yields: Better Productivity + Better Decisions + Better Customer Experience.',
+    quote: 'AI should improve the experience, not replace the human.',
+    formula: 'People, process, data, and AI can support better productivity, stronger decisions, and better customer experiences.',
     desc: 'AI improves how people work, how customers are served, and how leaders decide.'
   },
   leadershipWorkplace: {
-    quote: '"Leadership Still Matters in an AI Workplace."',
+    quote: 'Leadership still matters in an AI workplace.',
     points: [
       { title: 'Trust', desc: 'People perform differently when they know they are trusted.' },
       { title: 'Accountability', desc: 'Tech never removes the need for human ownership.' },
@@ -177,7 +177,7 @@ export const siteConfig = {
   },
   book: {
     title: 'The Bridge You Become: Becoming the Leader Others Remember',
-    quote: '"I didn\'t become a leader the day I was given a team. I became a leader the day someone trusted me enough to ask for my help."',
+    quote: 'I did not become a leader the day I was given a team. I became a leader the day someone trusted me enough to ask for my help.',
     desc: 'Explores moving from frontline newcomer to seasoned mentor. Authentic trust, emotional reality, and quiet consistency. Rated 4.9/5 on Amazon.',
     availability: 'Available on Amazon Global',
     cta: 'Order Your Copy / Read Excerpt',
