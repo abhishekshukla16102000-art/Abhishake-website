@@ -170,9 +170,9 @@ export const siteConfig = {
         image: '',
         href: 'https://www.thinkers360.com/tl/badge/33328/9210',
       },
-      { name: 'Top Voice: Agile', image: '/certificates/thinkers360-agile.png', href: '' },
-      { name: 'Top Voice: Leadership', image: '/certificates/thinkers360-leadership.png', remoteImage: '', href: '' },
-      { name: 'Top 50 Thought Leader: AI Ethics', image: '/certificates/thinkers360-ai-ethics.png', remoteImage: '', href: '' }
+      { name: 'Top Voice: Agile', image: '/certificates/thinkers360-agile.png', href: 'https://www.thinkers360.com/tl/badge/33328/8763' },
+      { name: 'Top Voice: Leadership', image: '/certificates/thinkers360-leadership.png', href: '' },
+      { name: 'Top 50 Thought Leader: AI Ethics', image: '/certificates/thinkers360-ai-ethics.png', href: 'https://www.thinkers360.com/tl/badge/33328/9211' }
     ]
   },
   book: {
