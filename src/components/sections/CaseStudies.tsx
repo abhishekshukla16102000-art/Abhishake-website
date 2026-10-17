@@ -10,13 +10,13 @@ export function CaseStudies() {
             What a focused improvement engagement can look like
           </h2>
           <p className="text-slate-300 leading-relaxed">
-            Every organization is different. The work starts with your current process, available evidence and goals—not a pre-selected tool or a promised result.
+            Every organization is different. We start with your current process, available evidence, and goals. Recommendations are based on your needs, not a pre-selected tool or a promised result.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="card-3d bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 shadow-lg">
-            <p className="text-xs font-bold uppercase tracking-wider text-sky-400 mb-3">
+            <p className="text-sm font-bold uppercase tracking-wider text-sky-400 mb-3">
               Illustrative example
             </p>
             <h3 className="text-xl font-bold mb-6">Improving a customer-support workflow</h3>
@@ -26,7 +26,7 @@ export function CaseStudies() {
               <li><strong className="text-white">Design:</strong> Recommend process changes, clearer knowledge resources and suitable AI-assist opportunities.</li>
               <li><strong className="text-white">Measure:</strong> Agree on baseline measures such as resolution time, repeat contacts, quality and team effort.</li>
             </ul>
-            <p className="text-xs text-slate-400 mt-6">
+            <p className="text-sm text-slate-300 mt-6">
               This is an example of a possible engagement, not a claim about a completed client project or measured result.
             </p>
           </div>
