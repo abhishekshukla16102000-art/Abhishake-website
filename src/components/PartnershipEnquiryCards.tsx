@@ -4,7 +4,6 @@ import { useEffect, useState, type FormEvent } from "react";
 import {
   ArrowRight,
   BarChart3,
-  Handshake,
   Users,
   Workflow,
   X,
