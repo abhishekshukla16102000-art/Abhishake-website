@@ -73,6 +73,8 @@ body {
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -173,6 +175,19 @@ body {
 .depth-shell {
   transform-style: preserve-3d;
   perspective: 1400px;
+}
+
+/* Keep supporting text comfortably readable across the site. */
+@layer utilities {
+  .text-sm {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .text-xs {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
