@@ -25,7 +25,18 @@ export function Credentials() {
                   <div className="h-full bg-white p-6 rounded-3xl shadow-sm border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all flex flex-col items-center text-center group">
                     <div className="w-32 h-32 relative mb-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
                       {badge.image ? (
-                        <Image src={badge.image} alt={badge.name} fill className="object-contain" unoptimized={badge.image.startsWith("http")} />
+                        badge.image.startsWith("http") ? (
+                          // The official Thinkers360 image is rendered directly to avoid Next.js image-host optimization issues.
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={badge.image}
+                            alt={badge.name}
+                            loading="lazy"
+                            className="h-full w-full object-contain"
+                          />
+                        ) : (
+                          <Image src={badge.image} alt={badge.name} fill className="object-contain" />
+                        )
                       ) : badge.href ? (
                         <div
                           className="w-full h-full rounded-full border border-sky-200 bg-gradient-to-br from-slate-950 via-sky-900 to-slate-800 flex flex-col items-center justify-center text-white shadow-inner"
