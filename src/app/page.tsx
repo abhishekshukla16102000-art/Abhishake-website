@@ -61,6 +61,7 @@ export default function Home() {
         <WhyItMatters />
         <LeadershipArchitecture />
         <Credentials />
+        <Testimonials />
         <ResourceHub />
         <PublishedBook />
         <Insights />
