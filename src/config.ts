@@ -21,10 +21,10 @@ export const siteConfig = {
     greeting: '',
     name: 'Abhishek Shukla',
     subtitle: 'CX & AI Leader | Consultant | Project Leader | Author',
-    headline: 'Better Experiences. Smarter Operations. AI That Works.',
-    supporting: 'Practical CX, AI, operations and leadership solutions for organizations — and career, AI and leadership support for professionals.',
-    cta1: { text: 'Discuss a Business Challenge', href: '#contact' },
-    cta2: { text: 'Explore Professional Support', href: '#professionals' },
+    headline: 'Make customer operations work better with people, process, and practical AI.',
+    supporting: 'I help organizations identify service and workflow friction, improve how work gets done, and assess where AI can add practical value—starting with the business problem, not a pre-selected technology.',
+    cta1: { text: 'Explore Business Services', href: '/business' },
+    cta2: { text: 'See Areas I Support', href: '#organizations' },
     cta3: { text: 'Collaborate With Me', href: '#collaborations' }
   },
   credibilityStrip: {
