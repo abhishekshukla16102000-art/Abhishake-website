@@ -167,12 +167,13 @@ export const siteConfig = {
     badges: [
       {
         name: 'Top 50 Thought Leader: Customer Loyalty',
-        image: 'https://www.thinkers360.com/tl/assets/images/badges/top50/Top%2050%20-%20Customer%20Loyalty.png',
+        image: '',
+        remoteImage: 'https://www.thinkers360.com/tl/assets/images/badges/top50/Top%2050%20-%20Customer%20Loyalty.png',
         href: 'https://www.thinkers360.com/tl/badge/33328/9210',
       },
-      { name: 'Top Voice: Agile', image: '/certificates/thinkers360-agile.png', href: '' },
-      { name: 'Top Voice: Leadership', image: '/certificates/thinkers360-leadership.png', href: '' },
-      { name: 'Top 50 Thought Leader: AI Ethics', image: '/certificates/thinkers360-ai-ethics.png', href: '' }
+      { name: 'Top Voice: Agile', image: '/certificates/thinkers360-agile.png', remoteImage: '', href: '' },
+      { name: 'Top Voice: Leadership', image: '/certificates/thinkers360-leadership.png', remoteImage: '', href: '' },
+      { name: 'Top 50 Thought Leader: AI Ethics', image: '/certificates/thinkers360-ai-ethics.png', remoteImage: '', href: '' }
     ]
   },
   book: {
