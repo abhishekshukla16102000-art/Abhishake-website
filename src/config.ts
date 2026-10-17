@@ -31,6 +31,7 @@ export const siteConfig = {
     items: [
       'Thinkers360 Certified Expert in Leadership',
       'Thinkers360 Top 50 Global Thought Leader in AI Ethics',
+      'Thinkers360 Top 50 Thought Leader in Customer Loyalty',
       '7+ Years Experience',
       'CX & AI Transformation Leader',
       'Author of The Bridge You Become',
@@ -164,6 +165,11 @@ export const siteConfig = {
       { name: 'Customer Experience for Business Success', image: '/certificates/hp-life.jpg' }
     ],
     badges: [
+      {
+        name: 'Top 50 Thought Leader: Customer Loyalty',
+        image: '',
+        href: 'https://www.thinkers360.com/tl/badge/33328/9210',
+      },
       { name: 'Top Voice: Agile', image: '/certificates/thinkers360-agile.png' },
       { name: 'Top Voice: Leadership', image: '/certificates/thinkers360-leadership.png' },
       { name: 'Top 50 Thought Leader: AI Ethics', image: '/certificates/thinkers360-ai-ethics.png' }
