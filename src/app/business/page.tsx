@@ -27,18 +27,25 @@ const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
 )}`;
 
 export const metadata: Metadata = {
-  title: "Customer Experience and Operations Consulting | Practical AI | Abhishek Shukla",
+  title: "Contact Centre & BPO Consulting | Customer Experience & AI",
   description:
-    "Practical consulting for customer support, contact centre operations, process improvement, and AI readiness. Find friction, prioritize opportunities, and build a clear action plan.",
+    "Practical consulting for contact centre and BPO teams on customer service, operational improvement, and AI readiness. Explore a partnership with SPS Nexus Tech.",
   alternates: { canonical: "/business" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://iabhishekshukla.com/business",
-    title: "Improve Customer Experience and Operations | Abhishek Shukla",
+    title: "Contact Centre & BPO Partnerships | SPS Nexus Tech",
     description:
-      "Helping business teams improve customer service, simplify operations, and identify responsible, practical uses for AI.",
+      "Explore customer service improvement, contact centre operations, and practical AI readiness with SPS Nexus Tech.",
     siteName: "iAbhishekShukla.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Centre & BPO Consulting | Customer Experience & AI",
+    description:
+      "Practical consulting for contact centre and BPO teams on customer service, operational improvement, and AI readiness.",
+    creator: "@Abhishek1610200",
   },
 };
 
