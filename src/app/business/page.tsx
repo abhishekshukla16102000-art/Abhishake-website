@@ -103,18 +103,18 @@ const steps = [
 const principles = [
   {
     icon: Target,
-    title: "Business need before technology",
-    text: "Choose the approach after the problem and operating context are clear.",
+    title: "Start with the business need",
+    text: "Recommendations fit your customer experience, operating model, constraints, and priorities.",
   },
   {
     icon: ShieldCheck,
-    title: "Keep people in control",
-    text: "Consider human review, quality, risk, and customer impact when evaluating AI.",
+    title: "Keep people accountable",
+    text: "Protect service quality, customer trust, privacy, and human judgement when considering AI.",
   },
   {
     icon: BarChart3,
-    title: "Measure what changes",
-    text: "Agree on baseline measures before promising outcomes or scaling a solution.",
+    title: "Measure before scaling",
+    text: "Agree on a baseline and track relevant measures before expanding a change or investment.",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function BusinessLandingPage() {
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
               Improve customer service. Strengthen operations.
               <span className="mt-1 block bg-gradient-to-r from-sky-300 via-cyan-200 to-indigo-300 bg-clip-text text-transparent">
-                use AI where it makes business sense.
+                Use AI where it makes business sense.
               </span>
             </h1>
 
@@ -260,21 +260,28 @@ export default function BusinessLandingPage() {
         </div>
       </section>
 
-      <section className="border-b border-slate-200 bg-slate-50 px-5 py-8 sm:px-8">
-        <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            "Start with the business problem",
-            "Advice tailored to your operating context",
-            "Responsible AI and human oversight",
-            "Progress measures agreed before rollout",
-          ].map((item, index) => (
-            <div key={item} className="flex items-start gap-3 text-sm font-medium leading-6 text-slate-700">
-              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white text-sky-700 shadow-sm ring-1 ring-slate-200">
-                {index === 0 ? <Target size={15} /> : index === 1 ? <Compass size={15} /> : index === 2 ? <ShieldCheck size={15} /> : <BarChart3 size={15} />}
-              </span>
-              {item}
-            </div>
-          ))}
+      <section className="border-b border-slate-200 bg-slate-50 px-5 py-14 sm:px-8 sm:py-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">Who this helps</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">For leaders who need a clear next move.</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">This work is designed for customer experience, contact centre, BPO, and operations teams facing practical service or workflow challenges.</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Repeat customer contacts, avoidable escalations, or inconsistent service",
+              "Manual tasks, unclear handoffs, and workflows that depend on workarounds",
+              "Limited visibility into service quality, workload, or operating performance",
+              "Pressure to adopt AI without a clear use case or readiness plan",
+            ].map((item, index) => (
+              <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-sky-50 text-sky-700">
+                  {index === 0 ? <Target size={15} /> : index === 1 ? <Workflow size={15} /> : index === 2 ? <BarChart3 size={15} /> : <Sparkles size={15} />}
+                </span>
+                <p className="text-sm font-medium leading-6 text-slate-700">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
