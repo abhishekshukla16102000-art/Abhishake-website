@@ -77,7 +77,7 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-[420px] lg:ml-auto">
           <div className="overflow-hidden rounded-[1.75rem] border border-white/15 bg-slate-900 shadow-2xl shadow-black/25">
-            <div className="relative aspect-[4/4.5]">
+            <div className="relative aspect-[4/4.5] bg-slate-800">
               <Image
                 src={siteConfig.profileImage}
                 alt={siteConfig.name}
@@ -86,21 +86,17 @@ export function Hero() {
                 priority
                 className="object-cover object-top"
               />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent"
-                aria-hidden="true"
-              />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">
-                  Your consulting partner
-                </p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                  Abhishek Shukla
-                </h2>
-                <p className="mt-2 max-w-xs text-sm leading-6 text-slate-300">
-                  Customer experience, operations improvement, and practical AI adoption.
-                </p>
-              </div>
+            </div>
+            <div className="border-t border-white/10 bg-slate-900 p-6 sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">
+                Your consulting partner
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                Abhishek Shukla
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                Customer experience, operations improvement, and practical AI adoption.
+              </p>
             </div>
           </div>
 
