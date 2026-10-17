@@ -287,7 +287,6 @@ export default function BusinessLandingPage() {
       </section>
 
       <section id="partnership" className="scroll-mt-24 overflow-hidden border-y border-slate-200 bg-slate-950 px-5 py-20 text-white sm:px-8 sm:py-24">
-        <div className="pointer-events-none absolute" aria-hidden="true" />
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-300">Partnership opportunity</p>
