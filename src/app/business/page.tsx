@@ -412,7 +412,7 @@ export default function BusinessLandingPage() {
                   <p className="mt-1 text-sm font-semibold leading-5 text-slate-800">{siteConfig.location}</p>
                 </div>
               </div>
-              <a href={`tel:${siteConfig.phone.replace(/[^\\d+]/g, "")}`} className="flex min-w-0 items-start gap-3 rounded-xl bg-slate-50 p-3.5 transition hover:bg-sky-50">
+              <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`} className="flex min-w-0 items-start gap-3 rounded-xl bg-slate-50 p-3.5 transition hover:bg-sky-50">
                 <Phone size={18} className="mt-0.5 shrink-0 text-sky-700" aria-hidden="true" />
                 <div className="min-w-0">
                   <p className="text-xs font-medium text-slate-500">Phone</p>
@@ -453,7 +453,7 @@ export default function BusinessLandingPage() {
             <div className="mt-5 space-y-4 border-t border-white/10 pt-5">
               <div>
                 <p className="text-sm text-slate-400">Phone</p>
-                <a href={`tel:${siteConfig.phone.replace(/[^\\d+]/g, "")}`} className="mt-1 block font-semibold text-white underline decoration-sky-400/50 underline-offset-4 hover:decoration-sky-300">{siteConfig.phone}</a>
+                <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`} className="mt-1 block font-semibold text-white underline decoration-sky-400/50 underline-offset-4 hover:decoration-sky-300">{siteConfig.phone}</a>
               </div>
               <div className="flex items-start gap-2 text-sm leading-6 text-slate-300">
                 <MapPin size={17} className="mt-1 shrink-0 text-sky-300" aria-hidden="true" />
