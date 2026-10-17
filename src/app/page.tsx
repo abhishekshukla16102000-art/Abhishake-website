@@ -1,5 +1,29 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Customer Experience, AI & Operations Consultant | Abhishek Shukla",
+  description:
+    "Helping organizations improve customer experience, contact centre operations, and practical AI adoption through process improvement and human-centred consulting.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://iabhishekshukla.com/",
+    title: "Customer Experience, AI & Operations Consultant | Abhishek Shukla",
+    description:
+      "Helping organizations improve customer experience, contact centre operations, and practical AI adoption through process improvement and human-centred consulting.",
+    siteName: "iAbhishekShukla.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Customer Experience, AI & Operations Consultant | Abhishek Shukla",
+    description:
+      "Helping organizations improve customer experience, contact centre operations, and practical AI adoption through process improvement and human-centred consulting.",
+    creator: "@Abhishek1610200",
+  },
+};
 import {
   Hero,
   CredibilityStrip,
