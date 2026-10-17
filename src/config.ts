@@ -167,7 +167,7 @@ export const siteConfig = {
     badges: [
       {
         name: 'Top 50 Thought Leader: Customer Loyalty',
-        image: 'https://static.wixstatic.com/media/00b8b5_23b8da66f1ea49c5b209fe1554fa4e36~mv2.png/v1/fill/w_274%2Ch_352%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Top%2050%20-%20Customer%20Loyalty%20%283%29.png',
+        image: 'https://www.thinkers360.com/tl/assets/images/badges/top50/Top%2050%20-%20Customer%20Loyalty.png',
         href: 'https://www.thinkers360.com/tl/badge/33328/9210',
       },
       { name: 'Top Voice: Agile', image: '/certificates/thinkers360-agile.png', href: '' },
