@@ -9,7 +9,7 @@ export function AIPhilosophy() {
         <blockquote className="text-2xl font-medium text-[#334155] mb-8">
           {quote}
         </blockquote>
-        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-8">
+        <div className="card-3d relative overflow-hidden bg-gradient-to-br from-white via-white to-sky-50/80 p-8 rounded-2xl shadow-[0_18px_45px_rgba(15,23,42,0.08)] border border-slate-200 mb-8">
           <p className="font-semibold text-lg text-[#0f172a] mb-2">The Ecosystem Formula:</p>
           <p className="text-[#0284c7] font-bold text-xl">{formula}</p>
         </div>

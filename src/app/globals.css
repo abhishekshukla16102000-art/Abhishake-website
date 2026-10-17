@@ -73,6 +73,8 @@ body {
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -148,4 +150,52 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+
+/* Subtle 3D depth for interactive panels across the site */
+.card-3d {
+  transform: perspective(1200px) translateZ(0);
+  transform-style: preserve-3d;
+  transition:
+    transform 420ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 420ms ease,
+    border-color 420ms ease;
+  will-change: transform;
+}
+
+.card-3d:hover,
+.card-3d:focus-within {
+  transform: perspective(1200px) translateY(-6px) rotateX(1.5deg) rotateY(-0.6deg);
+  box-shadow:
+    0 24px 50px rgba(15, 23, 42, 0.13),
+    0 5px 14px rgba(2, 132, 199, 0.08);
+}
+
+.depth-shell {
+  transform-style: preserve-3d;
+  perspective: 1400px;
+}
+
+/* Keep supporting text comfortably readable across the site. */
+@layer utilities {
+  .text-sm {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .text-xs {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-3d,
+  .card-3d:hover,
+  .card-3d:focus-within {
+    transition: none;
+    transform: none;
+    will-change: auto;
+  }
 }

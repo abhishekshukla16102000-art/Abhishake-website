@@ -9,38 +9,40 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Abhishek Shukla CX & AI Leader | Author",
+  title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
   description:
-    "Abhishek Shukla is a CX & AI Project Leader and Author with 7+ years of experience transforming operations through Generative AI, automation, and human-centered leadership. Author of THE BRIDGE YOU BECOME.",
+    "Practical consulting for customer experience, AI adoption, operational improvement and leadership. Start with your business challenge and build a realistic action plan.",
   keywords: [
-    "Abhishek Shukla CX & AI",
     "Abhishek Shukla",
-    "CX & AI Leader",
-    "CX & AI Project Leader",
-    "Customer Experience",
-    "AI Operations",
-    "Abhishek Shukla Author",
-    "THE BRIDGE YOU BECOME",
-    "AI-Driven Operations",
-    "Lean Six Sigma",
+    "customer experience consultant",
+    "CX transformation",
+    "AI adoption consulting",
+    "operations improvement",
+    "AI workplace productivity",
+    "process improvement",
+    "leadership and change management",
+    "The Bridge You Become",
   ],
   authors: [{ name: "Abhishek Shukla" }],
   creator: "Abhishek Shukla",
-  metadataBase: new URL("https://www.iabhishekshukla.com"),
+  metadataBase: new URL("https://iabhishekshukla.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://www.iabhishekshukla.com",
-    title: "Abhishek Shukla CX & AI Leader | Author",
+    locale: "en_IN",
+    url: "https://iabhishekshukla.com",
+    title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
     description:
-      "Abhishek Shukla is a CX & AI Project Leader and Author with 7+ years of experience transforming operations through Generative AI, automation, and human-centered leadership.",
-    siteName: "Abhishek Shukla Portfolio",
+      "Practical consulting for customer experience, AI adoption, operational improvement and leadership. Start with your business challenge and build a realistic action plan.",
+    siteName: "iAbhishekShukla.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhishek Shukla CX & AI Leader | Author",
+    title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
     description:
-      "Abhishek Shukla is a CX & AI Project Leader and Author transforming operations through Generative AI, automation, and human-centered leadership.",
+      "Practical consulting for customer experience, AI adoption, operational improvement and leadership.",
     creator: "@Abhishek1610200",
   },
   robots: {
@@ -65,8 +67,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Abhishek Shukla",
-              jobTitle: "CX & AI Project Leader | Author",
-              url: "https://www.iabhishekshukla.com",
+              jobTitle: "CX & AI Consultant, Project Leader and Author",
+              url: "https://iabhishekshukla.com",
+              email: "abhishek@iabhishekshukla.com",
               sameAs: [
                 "https://www.linkedin.com/in/abhishek-shukla-cx",
                 "https://x.com/Abhishek1610200",
@@ -74,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "https://www.youtube.com/@CXAILeader",
               ],
               description:
-                "Abhishek Shukla is a CX & AI Project Leader with 7+ years of experience in customer experience management, AI-driven process optimization, and operational excellence.",
+                "Practical consulting in customer experience, AI adoption, operations improvement and human-centred leadership.",
             }),
           }}
         />

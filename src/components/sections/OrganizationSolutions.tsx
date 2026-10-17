@@ -16,7 +16,7 @@ export function OrganizationSolutions() {
               key={idx} 
               href={`?request=${encodeURIComponent(service.title)}`}
               scroll={false}
-              className="bg-white p-8 rounded-xl border border-slate-200 hover:border-[#0284c7] hover:shadow-lg transition cursor-pointer block group"
+              className="card-3d bg-gradient-to-br from-white via-white to-sky-50/70 p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-[#0284c7] cursor-pointer block group"
             >
               <h3 className="text-xl font-bold mb-4 text-[#0f172a] group-hover:text-[#0284c7] transition-colors">{service.title}</h3>
               <ul className="space-y-3">

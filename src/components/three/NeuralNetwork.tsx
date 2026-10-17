@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 
-const NODE_COUNT = 250;
+const NODE_COUNT = 140;
 const CONNECTION_DISTANCE = 1.8;
 
 const colorPalette = [
@@ -170,7 +170,7 @@ export default function NeuralNetwork() {
     <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 0 }}>
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
-        dpr={[1, 2]}
+        dpr={[1, 1.4]}
         gl={{ antialias: true, alpha: true }}
         style={{ position: 'absolute', inset: 0 }}
       >

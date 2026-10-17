@@ -18,8 +18,8 @@ function LoadingState() {
 
 function FallbackState() {
   return (
-    <div className="absolute inset-0 bg-slate-50 overflow-hidden z-0">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-slate-50 to-slate-100"></div>
+    <div className="absolute inset-0 bg-transparent overflow-hidden z-0">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-300/5 via-transparent to-transparent"></div>
     </div>
   );
 }
