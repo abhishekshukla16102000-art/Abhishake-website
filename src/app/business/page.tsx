@@ -247,7 +247,7 @@ export default function BusinessLandingPage() {
                 </p>
               </div>
             </div>
-            <div className="relative mt-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:absolute sm:-bottom-7 sm:-left-7 sm:mt-0 sm:max-w-[290px] sm:shadow-xl sm:shadow-black/20">
+            <div className="relative mt-4 flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-lg shadow-black/10">
               <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/15 bg-slate-800">
                 <Image src={siteConfig.profileImage} alt={siteConfig.name} fill sizes="48px" className="object-cover object-top" />
               </div>
