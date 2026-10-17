@@ -484,7 +484,7 @@ export default function BusinessLandingPage() {
           <div className="min-w-0 text-center md:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">Your point of contact</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Abhishek Shukla</h2>
-            <p className="mt-3 text-base font-semibold leading-7 text-slate-800 sm:text-lg">Founder at SPS Nexus Tech. Customer Experience and AI Leader. Consultant, Project Leader, and Author.</p>
+            <p className="mt-3 text-base font-semibold leading-7 text-slate-800 sm:text-lg">Founder, SPS Nexus Tech | CX & AI Leader</p>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
               I bring together customer experience, service operations, process improvement, data, and practical AI to help teams make informed decisions. The focus is always on business needs, people, and changes that can be tested and measured.
             </p>
