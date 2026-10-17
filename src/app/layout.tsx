@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
+  title: "Customer Experience, AI & Operations Consultant | Abhishek Shukla",
   description:
-    "Practical consulting for customer experience, AI adoption, operational improvement and leadership. Start with your business challenge and build a realistic action plan.",
+    "Helping organizations improve customer experience, contact centre operations, and practical AI adoption through process improvement and human-centred consulting.",
   keywords: [
     "Abhishek Shukla",
     "customer experience consultant",
@@ -26,9 +26,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Abhishek Shukla" }],
   creator: "Abhishek Shukla",
   metadataBase: new URL("https://iabhishekshukla.com"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -66,10 +63,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
+              "@id": "https://iabhishekshukla.com/#person",
               name: "Abhishek Shukla",
-              jobTitle: "CX & AI Consultant, Project Leader and Author",
+              jobTitle: "Founder of SPS Nexus Tech; Customer Experience and AI Consultant",
               url: "https://iabhishekshukla.com",
+              image: "https://iabhishekshukla.com/about_profile.jpg",
               email: "abhishek@iabhishekshukla.com",
+              worksFor: {
+                "@type": "Organization",
+                "@id": "https://iabhishekshukla.com/business#organization",
+                name: "SPS Nexus Tech",
+                url: "https://iabhishekshukla.com/business",
+              },
+              knowsAbout: [
+                "Customer experience management",
+                "Contact centre operations",
+                "BPO operations",
+                "AI adoption and readiness",
+                "Business process improvement",
+                "Operations and performance management",
+                "Human-centred leadership",
+              ],
               sameAs: [
                 "https://www.linkedin.com/in/abhishek-shukla-cx",
                 "https://x.com/Abhishek1610200",
