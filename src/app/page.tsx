@@ -54,6 +54,7 @@ export default function Home() {
         <OrganizationSolutions />
         <Methodology />
         <CaseStudies />
+        <Testimonials />
         <AIPhilosophy />
         <AudiencePathways />
         <ProfessionalServices />
