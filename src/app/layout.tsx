@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@id": "https://www.iabhishekshukla.com/#person",
               name: "Abhishek Shukla",
               jobTitle: "Founder of SPS Nexus Tech; Customer Experience and AI Consultant",
-              url: "https://iabhishekshukla.com",
+              url: "https://www.iabhishekshukla.com",
               image: "https://www.iabhishekshukla.com/about_profile.jpg",
               email: "abhishek@iabhishekshukla.com",
               worksFor: {
