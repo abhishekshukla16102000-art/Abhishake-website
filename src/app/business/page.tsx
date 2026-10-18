@@ -393,6 +393,31 @@ export default function BusinessLandingPage() {
           <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-5 text-slate-500">
             Scope and deliverables are agreed after an initial discussion. Recommendations are tailored to the information available; specific financial or operational outcomes are not guaranteed.
           </p>
+
+          <div className="mt-12 border-t border-slate-200 pt-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-700 sm:text-sm">Explore a specific challenge</p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">Focused guidance for your team</h3>
+              <p className="mt-3 text-base leading-7 text-slate-600">Explore a service in more detail, including the questions to consider and the work an initial review may cover.</p>
+            </div>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <Link href="/customer-experience-consulting" className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
+                <h4 className="font-semibold text-slate-950 group-hover:text-sky-800">Customer experience consulting</h4>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Customer journeys, repeat contacts, service quality, and operational friction.</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-800">Explore CX services <ArrowRight size={15} aria-hidden="true" /></span>
+              </Link>
+              <Link href="/contact-centre-bpo-consulting" className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
+                <h4 className="font-semibold text-slate-950 group-hover:text-sky-800">Contact centre and BPO consulting</h4>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Workflows, agent enablement, quality, performance, and potential partnerships.</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-800">Explore BPO services <ArrowRight size={15} aria-hidden="true" /></span>
+              </Link>
+              <Link href="/ai-readiness-consulting" className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
+                <h4 className="font-semibold text-slate-950 group-hover:text-sky-800">AI readiness consulting</h4>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Use-case fit, data readiness, privacy, human oversight, and pilot planning.</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-800">Explore AI readiness <ArrowRight size={15} aria-hidden="true" /></span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
