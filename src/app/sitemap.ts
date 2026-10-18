@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://iabhishekshukla.com";
+const siteUrl = "https://www.iabhishekshukla.com";
 const lastModified = new Date("2026-10-18T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/insights`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${siteUrl}/insights/ai-readiness-checklist`,
