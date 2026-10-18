@@ -21,7 +21,7 @@ const navGroups = [
       { label: 'Resources', href: '#resources' },
       { label: 'Leadership', href: '#leadership' },
       { label: 'Book', href: '#book' },
-      { label: 'All Insights', href: '#insights' },
+      { label: 'All Insights', href: '/insights' },
     ]
   },
   {
