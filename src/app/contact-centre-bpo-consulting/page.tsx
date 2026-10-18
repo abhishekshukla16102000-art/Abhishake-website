@@ -3,14 +3,14 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Handshake, Users, Workflow } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Centre & BPO Consulting | CX and Operations",
+  title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
   description:
     "Contact centre and BPO consulting focused on service workflows, quality, agent support, operational measures, and practical AI readiness with SPS Nexus Tech.",
   alternates: { canonical: "/contact-centre-bpo-consulting" },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/contact-centre-bpo-consulting",
+    url: "https://www.iabhishekshukla.com/contact-centre-bpo-consulting",
     title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
     description:
       "Review contact centre workflows, support quality, agent handoffs, and AI readiness with a practical, human-centred approach.",

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/insights/ai-readiness-checklist",
+    url: "https://www.iabhishekshukla.com/insights/ai-readiness-checklist",
     title: "AI Readiness Checklist for Businesses: 10 Questions Before a Pilot",
     description:
       "A practical checklist for business leaders assessing use cases, data readiness, risk, human oversight, and pilot success measures.",
     publishedTime: "2026-10-18T00:00:00.000Z",
     modifiedTime: "2026-10-18T00:00:00.000Z",
-    authors: ["https://iabhishekshukla.com/"],
+    authors: ["https://www.iabhishekshukla.com/"],
     siteName: "iAbhishekShukla.com",
   },
 };
@@ -32,9 +32,9 @@ const articleSchema = {
   author: {
     "@type": "Person",
     name: "Abhishek Shukla",
-    url: "https://iabhishekshukla.com/",
+    url: "https://www.iabhishekshukla.com/",
   },
-  mainEntityOfPage: "https://iabhishekshukla.com/insights/ai-readiness-checklist",
+  mainEntityOfPage: "https://www.iabhishekshukla.com/insights/ai-readiness-checklist",
 };
 
 const checklist = [

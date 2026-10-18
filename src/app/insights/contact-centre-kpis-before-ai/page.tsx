@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/insights/contact-centre-kpis-before-ai",
+    url: "https://www.iabhishekshukla.com/insights/contact-centre-kpis-before-ai",
     title: "Contact Centre KPIs to Review Before AI Automation",
     description:
       "A practical guide to selecting contact centre measures before introducing AI assistance or automation.",
     publishedTime: "2026-10-18T00:00:00.000Z",
     modifiedTime: "2026-10-18T00:00:00.000Z",
-    authors: ["https://iabhishekshukla.com/"],
+    authors: ["https://www.iabhishekshukla.com/"],
     siteName: "iAbhishekShukla.com",
   },
 };
@@ -32,9 +32,9 @@ const articleSchema = {
   author: {
     "@type": "Person",
     name: "Abhishek Shukla",
-    url: "https://iabhishekshukla.com/",
+    url: "https://www.iabhishekshukla.com/",
   },
-  mainEntityOfPage: "https://iabhishekshukla.com/insights/contact-centre-kpis-before-ai",
+  mainEntityOfPage: "https://www.iabhishekshukla.com/insights/contact-centre-kpis-before-ai",
 };
 
 const metrics = [
