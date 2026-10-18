@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Abhishek Shukla" }],
   creator: "Abhishek Shukla",
-  metadataBase: new URL("https://iabhishekshukla.com"),
+  metadataBase: new URL("https://www.iabhishekshukla.com"),
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com",
+    url: "https://www.iabhishekshukla.com",
     title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
     description:
       "Practical consulting for customer experience, AI adoption, operational improvement and leadership. Start with your business challenge and build a realistic action plan.",
@@ -63,17 +63,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://iabhishekshukla.com/#person",
+              "@id": "https://www.iabhishekshukla.com/#person",
               name: "Abhishek Shukla",
               jobTitle: "Founder of SPS Nexus Tech; Customer Experience and AI Consultant",
-              url: "https://iabhishekshukla.com",
-              image: "https://iabhishekshukla.com/about_profile.jpg",
+              url: "https://www.iabhishekshukla.com",
+              image: "https://www.iabhishekshukla.com/about_profile.jpg",
               email: "abhishek@iabhishekshukla.com",
               worksFor: {
                 "@type": "Organization",
-                "@id": "https://iabhishekshukla.com/business#organization",
+                "@id": "https://www.iabhishekshukla.com/#organization",
                 name: "SPS Nexus Tech",
-                url: "https://iabhishekshukla.com/business",
+                url: "https://www.iabhishekshukla.com/business",
               },
               knowsAbout: [
                 "Customer experience management",

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/business",
+    url: "https://www.iabhishekshukla.com/business",
     title: "Contact Centre & BPO Partnerships | SPS Nexus Tech",
     description:
       "Explore customer service improvement, contact centre operations, and practical AI readiness with SPS Nexus Tech.",
