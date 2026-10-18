@@ -3,14 +3,14 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Compass, Users, Workflow } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Customer Experience Consulting | Service Improvement | Abhishek Shukla",
+  title: "Customer Experience Consulting | Abhishek Shukla",
   description:
     "Practical customer experience consulting for better customer journeys, contact centre performance, quality, and service operations. India and remote engagements.",
   alternates: { canonical: "/customer-experience-consulting" },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/customer-experience-consulting",
+    url: "https://www.iabhishekshukla.com/customer-experience-consulting",
     title: "Customer Experience Consulting | Abhishek Shukla",
     description:
       "Identify customer friction, review service workflows, and prioritize measurable improvements to customer experience and support operations.",
