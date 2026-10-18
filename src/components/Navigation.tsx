@@ -28,6 +28,7 @@ const navGroups = [
     label: 'About',
     items: [
       { label: 'Overview', href: '#about' },
+      { label: 'Client Feedback', href: '#testimonials' },
       { label: 'Credentials', href: '#credentials' },
       { label: 'Collaborations', href: '#collaborations' },
     ]
