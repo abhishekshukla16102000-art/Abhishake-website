@@ -81,9 +81,9 @@ export function Testimonials() {
           </div>
 
           <p className="mt-5 text-sm leading-6 text-slate-500">
-            Want to share a public recommendation instead? Use a platform where
-            you can post in your own words. We will link a Google review page
-            here once an eligible, verified Business Profile is confirmed.
+            Feedback is voluntary. You can share your experience privately or
+            give explicit permission for the submitted text to be published.
+            Please do not include confidential company or customer information.
           </p>
         </div>
 
@@ -192,10 +192,9 @@ export function Testimonials() {
                 className="mt-1 h-4 w-4 shrink-0 accent-sky-700"
               />
               <span className="text-sm leading-6 text-slate-700">
-                I give permission for this feedback to be considered for
-                publication on the website with my name and role. I understand
-                the feedback may be edited for length or clarity without
-                changing its meaning. Leave unchecked if you want to share
+                I give permission to publish the feedback I submitted on
+                iAbhishekShukla.com, with my name and role as provided. I can
+                request removal later. Leave unchecked if you want to share
                 feedback privately only.
               </span>
             </label>
