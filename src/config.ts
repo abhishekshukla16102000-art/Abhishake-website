@@ -221,6 +221,7 @@ export const siteConfig = {
     { label: 'Book', href: '#book' },
     { label: 'Insights', href: '#insights' },
     { label: 'About', href: '#about' },
+    { label: 'Client Feedback', href: '#testimonials' },
     { label: 'Credentials', href: '#credentials' },
     { label: 'Contact', href: '#contact' },
   ],
