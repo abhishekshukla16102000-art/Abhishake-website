@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://iabhishekshukla.com/sitemap.xml",
+    sitemap: "https://www.iabhishekshukla.com/sitemap.xml",
   };
 }
