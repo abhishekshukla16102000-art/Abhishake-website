@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/",
+    url: "https://www.iabhishekshukla.com/",
     title: "Customer Experience, AI & Operations Consultant | Abhishek Shukla",
     description:
       "Helping organizations improve customer experience, contact centre operations, and practical AI adoption through process improvement and human-centred consulting.",
