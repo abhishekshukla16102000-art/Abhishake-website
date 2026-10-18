@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iabhishekshukla.com/ai-readiness-consulting",
+    url: "https://www.iabhishekshukla.com/ai-readiness-consulting",
     title: "AI Readiness Consulting for Businesses | Abhishek Shukla",
     description:
       "Identify appropriate AI use cases, dependencies, risks, human oversight needs, and practical next steps before scaling.",
