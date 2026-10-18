@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BarChart3, CheckCircle2, Handshake, Users, Workflow } from "lucide-react";
+import { ArrowRight, CheckCircle2, Handshake, Users, Workflow } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Centre & BPO Consulting | CX and Operations",
