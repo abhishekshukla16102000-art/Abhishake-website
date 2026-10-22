@@ -39,7 +39,7 @@ const process = [
   },
   {
     title: "2. Check delivery fit before promising a service",
-    text: "SPS Nexus Tech reviews the requirement and explores whether a suitable delivery partner can meet the scope, security needs, timing, and commercial expectations. Availability is confirmed before any commitment.",
+    text: "We assess the requirement, operating needs, service expectations, and commercial fit to shape a practical delivery plan.",
   },
   {
     title: "3. Agree scope, measures, and responsibilities",
@@ -74,7 +74,7 @@ export default function CustomerSupportOutsourcingPage() {
             Customer support outsourcing, scoped before you commit
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            SPS Nexus Tech helps businesses clarify their customer-support requirements and explore a suitable delivery route. We start with the workflow, expected demand, quality needs, and operating constraints—not a promise of capacity before it has been confirmed.
+            SPS Nexus Tech helps businesses improve customer support through a tailored approach to contact centre operations, service quality, and delivery planning. We align the support model with your customer needs, operating hours, channels, and performance goals.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href={enquiryHref} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300">
@@ -85,7 +85,7 @@ export default function CustomerSupportOutsourcingPage() {
             </Link>
           </div>
           <p className="mt-5 max-w-3xl text-sm leading-6 text-slate-400">
-            Partner-led model: any delivery partner, staffing, coverage, pricing, and start date must be confirmed for the specific requirement before a service is offered.
+            Flexible delivery planning: define the right coverage, channels, service levels, and operating model around your business requirements.
           </p>
         </div>
       </section>
@@ -132,13 +132,13 @@ export default function CustomerSupportOutsourcingPage() {
           </div>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight">Tell us what your customers need</h2>
           <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-            Share your support workflow and the outcome you want to improve. We can review the requirement and determine whether a consulting engagement or a confirmed partner-led delivery route is appropriate.
+            Share your support requirements, customer channels, and desired outcomes. We will discuss a practical approach aligned with your business goals.
           </p>
           <a href={enquiryHref} className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300">
             Send a business enquiry <ArrowRight size={17} aria-hidden="true" />
           </a>
           <p className="mt-5 text-sm leading-6 text-slate-400">
-            SPS Nexus Tech is an early-stage venture. We do not represent a project as staffed, live, or available until delivery capability and responsibilities have been confirmed.
+            We work with you to define the right support model, service expectations, and delivery plan for your business.
           </p>
         </div>
       </section>
