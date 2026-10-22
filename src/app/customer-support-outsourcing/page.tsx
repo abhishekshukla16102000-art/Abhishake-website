@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, CheckCircle2, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -59,7 +58,7 @@ export default function CustomerSupportOutsourcingPage() {
     <main className="min-h-screen bg-white text-slate-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
-          <Link href="/" className="inline-flex items-center" aria-label="SPS Nexus Tech homepage"><Image src="/sps-nexus-tech-logo.svg" alt="SPS Nexus Tech" width={170} height={134} priority className="h-12 w-auto object-contain" /></Link>
+          <Link href="/" className="font-semibold tracking-tight text-slate-950">SPS Nexus Tech</Link>
           <Link href="/business" className="text-sm font-semibold text-sky-800 hover:text-sky-600">
             Business services <ArrowRight className="ml-1 inline" size={15} aria-hidden="true" />
           </Link>
