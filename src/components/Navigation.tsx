@@ -32,6 +32,7 @@ const navGroups = [
       { label: 'Collaborations', href: '#collaborations' },
     ]
   },
+  { label: 'Outsourcing', href: '/customer-support-outsourcing' },
   { label: 'Contact', href: '#contact' },
 ];
 
