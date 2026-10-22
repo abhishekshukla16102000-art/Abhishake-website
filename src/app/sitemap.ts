@@ -24,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${siteUrl}/customer-support-outsourcing`,
+      lastModified: new Date("2026-10-22T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${siteUrl}/contact-centre-bpo-consulting`,
       lastModified,
       changeFrequency: "monthly",
