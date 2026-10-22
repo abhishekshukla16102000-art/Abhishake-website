@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Handshake, MessageCircle, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, CheckCircle2, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Customer Support Outsourcing for US & Canadian Businesses | SPS Nexus Tech",
