@@ -133,7 +133,7 @@ export default function BusinessLandingPage() {
       <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
           <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Abhishek Shukla homepage">
-            <Image src="/sps-nexus-tech-logo.svg" alt="SPS Nexus Tech" width={170} height={134} priority className="h-12 w-auto object-contain" />
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-sm font-bold tracking-wide text-white shadow-sm">AS</span>
             <span className="leading-tight">
               <span className="block text-sm font-bold tracking-tight text-slate-950 sm:text-base">
                 Abhishek Shukla
