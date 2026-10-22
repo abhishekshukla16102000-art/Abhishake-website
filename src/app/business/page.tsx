@@ -27,17 +27,17 @@ const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
 )}`;
 
 export const metadata: Metadata = {
-  title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
+  title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
   description:
-    "Practical consulting for contact centre and BPO teams on customer service, operational improvement, and AI readiness. Explore a partnership with SPS Nexus Tech.",
+    "Explore customer support, contact centre improvement and partner-led BPO opportunities for US and Canadian businesses. Scope delivery, quality and responsibilities before committing.",
   alternates: { canonical: "/business" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com/business",
-    title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
+    title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
     description:
-      "Explore customer service improvement, contact centre operations, and practical AI readiness with SPS Nexus Tech.",
+      "Discuss customer support requirements, contact centre performance and a potential partner-led delivery route with SPS Nexus Tech.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
