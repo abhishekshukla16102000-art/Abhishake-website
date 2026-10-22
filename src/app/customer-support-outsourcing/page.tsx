@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Customer Support Outsourcing Worldwide | SPS Nexus Tech",
+  title: "Customer Support Outsourcing | SPS Nexus Tech",
   description:
-    "Explore a partner-led route to customer support outsourcing for businesses worldwide. Define channels, hours, volumes, quality measures and delivery fit before committing.",
+    "Explore customer support outsourcing, contact centre operations, service quality, and flexible delivery planning tailored to your business needs.",
   alternates: { canonical: "/customer-support-outsourcing" },
   openGraph: {
     type: "website",
@@ -13,14 +14,14 @@ export const metadata: Metadata = {
     url: "https://www.iabhishekshukla.com/customer-support-outsourcing",
     title: "Customer Support Outsourcing Worldwide | SPS Nexus Tech",
     description:
-      "A practical, partner-led approach to scoping customer support needs, checking delivery fit and agreeing quality expectations before launch.",
+      "A practical approach to defining customer support needs, delivery fit, and quality expectations.",
     siteName: "SPS Nexus Tech",
   },
   twitter: {
     card: "summary_large_image",
     title: "Customer Support Outsourcing | SPS Nexus Tech",
     description:
-      "Explore a partner-led approach to customer support outsourcing for businesses worldwide.",
+      "Explore customer support outsourcing, contact centre operations, and service quality.",
     creator: "@Abhishek1610200",
   },
 };
@@ -51,14 +52,14 @@ export default function CustomerSupportOutsourcingPage() {
   const enquiryHref = `mailto:abhishek@iabhishekshukla.com?subject=${encodeURIComponent(
     "Customer Support Outsourcing Enquiry"
   )}&body=${encodeURIComponent(
-    "Hello SPS Nexus Tech,\n\nI would like to discuss a customer-support requirement.\n\nCompany and website:\nMy role:\nCustomer location(s):\nChannels needed (voice, email, chat):\nLanguages and support hours:\nApproximate monthly contact volume:\nCurrent challenge and desired outcome:\nTarget start date:\n\nRegards,"
+    "Hello SPS Nexus Tech,\n\nI would like to discuss a customer-support requirement.\n\nCompany and website:\nMy role:\nChannels needed (voice, email, chat):\nLanguages and support hours:\nApproximate monthly contact volume:\nCurrent challenge and desired outcome:\nTarget start date:\n\nRegards,"
   )}`;
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
-          <Link href="/" className="font-semibold tracking-tight text-slate-950">SPS Nexus Tech</Link>
+          <Link href="/" className="inline-flex items-center" aria-label="SPS Nexus Tech homepage"><Image src="/sps-nexus-tech-logo.svg" alt="SPS Nexus Tech" width={170} height={134} priority className="h-12 w-auto object-contain" /></Link>
           <Link href="/business" className="text-sm font-semibold text-sky-800 hover:text-sky-600">
             Business services <ArrowRight className="ml-1 inline" size={15} aria-hidden="true" />
           </Link>
@@ -68,7 +69,7 @@ export default function CustomerSupportOutsourcingPage() {
       <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-300">
-            Worldwide business enquiries
+            Business Enquiries
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Customer support outsourcing, scoped before you commit
