@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
+    title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
     description:
-      "Practical consulting for contact centre and BPO teams on customer service, operational improvement, and AI readiness.",
+      "Discuss customer support requirements, contact centre performance and a potential partner-led delivery route with SPS Nexus Tech.",
     creator: "@Abhishek1610200",
   },
 };
