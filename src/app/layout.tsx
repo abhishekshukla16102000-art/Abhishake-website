@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Customer Experience & Contact Centre Consulting | SPS Nexus Tech",
   description:
-    "Remote customer experience and contact centre consulting for businesses in the US, Canada and internationally. Improve support workflows, service quality and practical AI readiness.",
+    "Remote customer experience and contact centre consulting for businesses worldwide. Improve support workflows, service quality and practical AI readiness.",
   keywords: [
     "Abhishek Shukla",
     "customer experience consultant",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://www.iabhishekshukla.com",
     title: "SPS Nexus Tech | Customer Experience & Contact Centre Consulting",
     description:
-      "Practical customer experience, contact centre operations and AI-readiness consulting for organizations in the US, Canada and international markets.",
+      "Practical customer experience, contact centre operations and AI-readiness consulting for organizations worldwide.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
