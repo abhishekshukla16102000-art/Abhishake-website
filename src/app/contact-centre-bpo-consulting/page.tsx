@@ -3,17 +3,17 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Handshake, Users, Workflow } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
+  title: "Contact Centre Performance & BPO Consulting | SPS Nexus Tech",
   description:
-    "Contact centre and BPO consulting focused on service workflows, quality, agent support, operational measures, and practical AI readiness with SPS Nexus Tech.",
+    "Review contact centre workflows, customer service quality, agent handoffs and AI readiness. Remote advisory for BPO and support teams, including US and Canadian businesses.",
   alternates: { canonical: "/contact-centre-bpo-consulting" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com/contact-centre-bpo-consulting",
-    title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
+    title: "Contact Centre Performance & BPO Consulting | SPS Nexus Tech",
     description:
-      "Review contact centre workflows, support quality, agent handoffs, and AI readiness with a practical, human-centred approach.",
+      "Practical guidance on contact centre performance, customer support workflows and responsible AI readiness for service teams.",
     siteName: "iAbhishekShukla.com",
   },
 };
@@ -67,6 +67,7 @@ export default function ContactCentreBpoConsultingPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/business#partnership" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300">Explore a partnership <ArrowRight size={17} /></Link>
             <Link href="/customer-experience-consulting" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Customer experience consulting</Link>
+            <Link href="/customer-support-outsourcing" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Customer support outsourcing</Link>
           </div>
         </div>
       </section>
