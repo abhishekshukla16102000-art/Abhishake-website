@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Customer Experience, AI & Operations Consultant | Abhishek Shukla",
+  title: "Customer Experience & Contact Centre Consulting | SPS Nexus Tech",
   description:
-    "Helping organizations improve customer experience, contact centre operations, and practical AI adoption through process improvement and human-centred consulting.",
+    "Remote customer experience and contact centre consulting for businesses in the US, Canada and internationally. Improve support workflows, service quality and practical AI readiness.",
   keywords: [
     "Abhishek Shukla",
     "customer experience consultant",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com",
-    title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
+    title: "SPS Nexus Tech | Customer Experience & Contact Centre Consulting",
     description:
-      "Practical consulting for customer experience, AI adoption, operational improvement and leadership. Start with your business challenge and build a realistic action plan.",
+      "Practical customer experience, contact centre operations and AI-readiness consulting for organizations in the US, Canada and international markets.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
