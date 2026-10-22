@@ -3,15 +3,15 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Customer Support Outsourcing for US & Canadian Businesses | SPS Nexus Tech",
+  title: "Customer Support Outsourcing Worldwide | SPS Nexus Tech",
   description:
-    "Explore a partner-led route to customer support outsourcing for US and Canadian businesses. Define channels, hours, volumes, quality measures and delivery fit before committing.",
+    "Explore a partner-led route to customer support outsourcing for businesses worldwide. Define channels, hours, volumes, quality measures and delivery fit before committing.",
   alternates: { canonical: "/customer-support-outsourcing" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.iabhishekshukla.com/customer-support-outsourcing",
-    title: "Customer Support Outsourcing for US & Canadian Businesses | SPS Nexus Tech",
+    title: "Customer Support Outsourcing Worldwide | SPS Nexus Tech",
     description:
       "A practical, partner-led approach to scoping customer support needs, checking delivery fit and agreeing quality expectations before launch.",
     siteName: "SPS Nexus Tech",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Customer Support Outsourcing | SPS Nexus Tech",
     description:
-      "Explore a partner-led approach to customer support outsourcing for US and Canadian businesses.",
+      "Explore a partner-led approach to customer support outsourcing for businesses worldwide.",
     creator: "@Abhishek1610200",
   },
 };
@@ -68,7 +68,7 @@ export default function CustomerSupportOutsourcingPage() {
       <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-300">
-            Remote business enquiries · United States and Canada
+            Worldwide business enquiries
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Customer support outsourcing, scoped before you commit
