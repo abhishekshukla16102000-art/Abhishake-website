@@ -29,7 +29,7 @@ const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
 export const metadata: Metadata = {
   title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
   description:
-    "Explore customer support, contact centre improvement and partner-led BPO opportunities for US and Canadian businesses. Scope delivery, quality and responsibilities before committing.",
+    "Explore customer support, contact centre improvement and partner-led BPO opportunities for businesses worldwide. Scope delivery, quality and responsibilities before committing.",
   alternates: { canonical: "/business" },
   openGraph: {
     type: "website",
