@@ -100,9 +100,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="group flex items-center gap-2 z-50">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isScrolled ? 'bg-slate-900' : 'bg-white/10 hover:bg-white/20'}`}>
-            <span className={`text-lg font-bold ${isScrolled ? 'text-white' : 'text-white'}`}>AS</span>
-          </div>
+          <img
+            src="/sps-nexus-tech-logo.svg"
+            alt="SPS Nexus Tech"
+            className="h-10 w-auto max-w-[180px] object-contain"
+          />
           <span className={`font-bold tracking-tight hidden sm:block ${isScrolled ? 'text-slate-900' : 'text-white'} group-hover:text-[#0284c7] transition-colors`}>
             Abhishek Shukla
           </span>
