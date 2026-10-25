@@ -1,0 +1,9 @@
+{
+  "name": "HireTreeByAB",
+  "short_name": "HireTree",
+  "description": "A professional network built around people.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F6FB",
+  "theme_color": "#4658B8"
+}

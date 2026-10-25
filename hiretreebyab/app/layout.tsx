@@ -1,0 +1,4 @@
+import type {Metadata,Viewport} from "next";import "./globals.css";
+export const metadata:Metadata={title:"HireTreeByAB | A professional network built around people",description:"Build real professional relationships, share ideas, discover jobs, join communities and request career guidance for ₹1,200. Basic networking is free.",applicationName:"HireTreeByAB",manifest:"/site.webmanifest",icons:{icon:"/brand-mark.svg"},openGraph:{title:"HireTreeByAB",description:"Your professional network, built around real people and useful conversations.",type:"website",siteName:"HireTreeByAB"},robots:{index:true,follow:true}};
+export const viewport:Viewport={themeColor:"#4658B8",colorScheme:"light",width:"device-width",initialScale:1};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en-IN"><body>{children}</body></html>;}

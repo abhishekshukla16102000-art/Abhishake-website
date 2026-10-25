@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn(){return request.auth!=null;}
+  function self(uid){return signedIn()&&request.auth.uid==uid;}
+  function acceptedConnection(id,sender,recipient){
+   return exists(/databases/$(database)/documents/hiretreebyab_connections/$(id))
+    &&get(/databases/$(database)/documents/hiretreebyab_connections/$(id)).data.status=='accepted'
+    &&((get(/databases/$(database)/documents/hiretreebyab_connections/$(id)).data.requesterId==sender&&get(/databases/$(database)/documents/hiretreebyab_connections/$(id)).data.receiverId==recipient)||(get(/databases/$(database)/documents/hiretreebyab_connections/$(id)).data.requesterId==recipient&&get(/databases/$(database)/documents/hiretreebyab_connections/$(id)).data.receiverId==sender));
+  }
+  match /hiretreebyab_users/{id}{allow read:if signedIn();allow create,update,delete:if self(id);}
+  match /hiretreebyab_posts/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.userId==request.auth.uid&&request.resource.data.body is string&&request.resource.data.body.size()<=1500;allow update,delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_likes/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.userId==request.auth.uid;allow delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_comments/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.userId==request.auth.uid&&request.resource.data.body is string&&request.resource.data.body.size()<=500;allow update,delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_connections/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.requesterId==request.auth.uid&&request.resource.data.receiverId!=request.auth.uid;allow update:if signedIn()&&(resource.data.requesterId==request.auth.uid||resource.data.receiverId==request.auth.uid)&&request.resource.data.requesterId==resource.data.requesterId&&request.resource.data.receiverId==resource.data.receiverId;allow delete:if signedIn()&&(resource.data.requesterId==request.auth.uid||resource.data.receiverId==request.auth.uid);}
+  match /hiretreebyab_follows/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.followerId==request.auth.uid&&request.resource.data.followedId!=request.auth.uid;allow delete:if signedIn()&&resource.data.followerId==request.auth.uid;}
+  match /hiretreebyab_bookmarks/{id}{allow read:if signedIn()&&resource.data.userId==request.auth.uid;allow create:if signedIn()&&request.resource.data.userId==request.auth.uid;allow delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_jobs/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.ownerId==request.auth.uid;allow update,delete:if signedIn()&&resource.data.ownerId==request.auth.uid;}
+  match /hiretreebyab_job_applications/{id}{allow create:if signedIn()&&request.resource.data.userId==request.auth.uid&&exists(/databases/$(database)/documents/hiretreebyab_jobs/$(request.resource.data.jobId));allow read:if signedIn()&&(resource.data.userId==request.auth.uid||get(/databases/$(database)/documents/hiretreebyab_jobs/$(resource.data.jobId)).data.ownerId==request.auth.uid);allow update,delete:if signedIn()&&(resource.data.userId==request.auth.uid||get(/databases/$(database)/documents/hiretreebyab_jobs/$(resource.data.jobId)).data.ownerId==request.auth.uid);}
+  match /hiretreebyab_messages/{id}{allow read:if signedIn()&&(resource.data.senderId==request.auth.uid||resource.data.recipientId==request.auth.uid);allow create:if signedIn()&&request.resource.data.senderId==request.auth.uid&&request.resource.data.recipientId!=request.auth.uid&&acceptedConnection(request.resource.data.connectionId,request.resource.data.senderId,request.resource.data.recipientId);allow update,delete:if signedIn()&&resource.data.senderId==request.auth.uid;}
+  match /hiretreebyab_groups/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.ownerId==request.auth.uid;allow update,delete:if signedIn()&&resource.data.ownerId==request.auth.uid;}
+  match /hiretreebyab_group_members/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.userId==request.auth.uid;allow update,delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_events/{id}{allow read:if signedIn();allow create:if signedIn()&&request.resource.data.ownerId==request.auth.uid;allow update,delete:if signedIn()&&resource.data.ownerId==request.auth.uid;}
+  match /hiretreebyab_event_attendees/{id}{allow read:if signedIn();allow create,update:if signedIn()&&request.resource.data.userId==request.auth.uid;allow delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_notifications/{id}{allow read:if signedIn()&&resource.data.recipientId==request.auth.uid;allow create:if signedIn()&&request.resource.data.actorId==request.auth.uid&&request.resource.data.recipientId!=request.auth.uid;allow update:if signedIn()&&resource.data.recipientId==request.auth.uid&&request.resource.data.recipientId==resource.data.recipientId&&request.resource.data.actorId==resource.data.actorId;allow delete:if signedIn()&&resource.data.recipientId==request.auth.uid;}
+  match /hiretreebyab_guidance_bookings/{id}{allow read:if signedIn()&&resource.data.userId==request.auth.uid;allow create:if signedIn()&&request.resource.data.userId==request.auth.uid&&request.resource.data.feeInr==1200&&request.resource.data.status=='pending';allow update,delete:if signedIn()&&resource.data.userId==request.auth.uid;}
+  match /hiretreebyab_reports/{id}{allow create:if signedIn()&&request.resource.data.reporterId==request.auth.uid;allow read:if signedIn()&&resource.data.reporterId==request.auth.uid;}
+ }
+}
