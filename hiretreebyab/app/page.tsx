@@ -2,7 +2,7 @@
 import {useCallback,useEffect,useMemo,useState,type FormEvent,type ReactNode} from "react";
 import {onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,sendPasswordResetEmail,updateProfile as updateAuthProfile,type User as FirebaseUser} from "firebase/auth";
 import {deleteDoc,doc,getDoc,setDoc,updateDoc} from "firebase/firestore";
-import {Activity,ArrowUpRight,Bell,Bookmark,BookmarkCheck,BriefcaseBusiness,CalendarDays,Check,ChevronDown,Clock3,Compass,Feather,Heart,Home,LogOut,Mail,MapPin,MessageCircle,MessagesSquare,MoreHorizontal,Network,Plus,Search,Send,ShieldCheck,Sparkles,Users,UserRound,UserRoundPlus,X,Handshake} from "lucide-react";
+import {Activity,ArrowUpRight,Bell,Bookmark,BookmarkCheck,BriefcaseBusiness,Building2,CalendarDays,Check,ChevronDown,Clock3,Compass,Feather,Heart,Home,LogOut,Mail,MapPin,MessageCircle,MessagesSquare,MoreHorizontal,Network,Plus,Search,Send,ShieldCheck,Sparkles,Users,UserRound,UserRoundPlus,X,Handshake} from "lucide-react";
 import {auth,db,isFirebaseConfigured} from "@/src/lib/firebase";
 import {C,loadDashboard,postNotice,createRecord,pairId,loadApplicants,type Dashboard,type Profile,type Person,type Post,type Comment,type Job,type Group,type EventItem,type Notification,type Message,type Application} from "@/src/lib/data";
 type Section="feed"|"network"|"jobs"|"messages"|"groups"|"events"|"notifications"|"saved"|"guidance"|"profile";type Toast={kind:"success"|"error"|"info";text:string};
