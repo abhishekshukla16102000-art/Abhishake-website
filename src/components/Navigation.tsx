@@ -101,9 +101,9 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="group flex items-center gap-2 z-50">
           <img
-            src="/sps-nexus-tech-logo.svg"
+            src="/sps-nexus-tech-official-logo.png"
             alt="SPS Nexus Tech"
-            className="h-10 w-auto max-w-[180px] object-contain"
+            className="h-12 w-auto max-w-[210px] object-contain"
           />
           <span className={`font-bold tracking-tight hidden sm:block ${isScrolled ? 'text-slate-900' : 'text-white'} group-hover:text-[#0284c7] transition-colors`}>
             Abhishek Shukla

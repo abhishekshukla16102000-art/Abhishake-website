@@ -9,7 +9,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-white text-xl font-bold mb-4">{siteConfig.name}</h3>
+            <img
+              src="/sps-nexus-tech-official-logo.png"
+              alt="SPS Nexus Tech"
+              className="mb-4 h-14 w-auto max-w-[250px] object-contain"
+            />
             <p className="text-sm text-slate-400 max-w-md mb-6">
               CX & AI Leader | Consultant | Project Leader | Author
             </p>
