@@ -126,7 +126,9 @@ export async function POST(request: Request) {
     }
 
     const token =
-      process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
+      process.env.AI_GATEWAY_API_KEY ||
+      request.headers.get("x-vercel-oidc-token") ||
+      process.env.VERCEL_OIDC_TOKEN;
     if (!token) {
       return Response.json(
         {
