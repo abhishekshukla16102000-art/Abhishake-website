@@ -101,7 +101,7 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="group flex items-center gap-2 z-50">
           <img
-            src="/sps-nexus-tech-official-logo.png"
+            src={isScrolled ? "/sps-nexus-tech-official-logo.png" : "/sps-nexus-tech-official-logo-dark.png"}
             alt="SPS Nexus Tech"
             className="h-12 w-auto max-w-[210px] object-contain"
           />

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <img
-              src="/sps-nexus-tech-official-logo.png"
+              src="/sps-nexus-tech-official-logo-dark.png"
               alt="SPS Nexus Tech"
               className="mb-4 h-14 w-auto max-w-[250px] object-contain"
             />
