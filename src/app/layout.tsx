@@ -50,6 +50,7 @@ export const metadata: Metadata = {
 
 import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "@/components/ScrollToTop";
+import { WebsiteAssistant } from "@/components/WebsiteAssistant";
 import { ServiceModal } from "@/components/ServiceModal";
 import { Suspense } from "react";
 
@@ -99,6 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col bg-white text-slate-900 transition-colors duration-300">
         {children}
         <ScrollToTop />
+        <WebsiteAssistant />
         <Suspense fallback={null}>
           <ServiceModal />
         </Suspense>

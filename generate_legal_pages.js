@@ -14,7 +14,9 @@ const pages = {
       <p class="mb-4 text-slate-600 leading-relaxed">We do not share your personal information with third parties except as necessary to provide our services, comply with the law, or protect our rights.</p>
       <h2 class="text-xl font-bold mt-8 mb-4 text-slate-800">4. Data Security</h2>
       <p class="mb-4 text-slate-600 leading-relaxed">We take reasonable measures to help protect information about you from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction.</p>
-      <h2 class="text-xl font-bold mt-8 mb-4 text-slate-800">5. Contact Us</h2>
+      <h2 class="text-xl font-bold mt-8 mb-4 text-slate-800">5. Website Assistant</h2>
+      <p class="mb-4 text-slate-600 leading-relaxed">If you use the website assistant, the questions and messages you submit are sent to Vercel AI Gateway and the selected AI model provider to generate a response. This website does not currently save assistant conversations in its own database. Please do not submit passwords, payment details, or confidential personal or business information. Processing by Vercel and the model provider is subject to their respective privacy terms.</p>
+      <h2 class="text-xl font-bold mt-8 mb-4 text-slate-800">6. Contact Us</h2>
       <p class="mb-4 text-slate-600 leading-relaxed">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:abhishek@iabhishekshukla.com" class="text-sky-600 hover:underline">abhishek@iabhishekshukla.com</a>.</p>
     `
   },
