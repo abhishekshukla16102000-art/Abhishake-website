@@ -58,7 +58,9 @@ export default function CustomerSupportOutsourcingPage() {
     <main className="min-h-screen bg-white text-slate-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
-          <Link href="/" className="font-semibold tracking-tight text-slate-950">SPS Nexus Tech</Link>
+          <Link href="/" className="inline-flex items-center" aria-label="SPS Nexus Tech home">
+            <img src="/sps-nexus-tech-official-logo.png" alt="SPS Nexus Tech" className="h-12 w-auto max-w-[220px] object-contain" />
+          </Link>
           <Link href="/business" className="text-sm font-semibold text-sky-800 hover:text-sky-600">
             Business services <ArrowRight className="ml-1 inline" size={15} aria-hidden="true" />
           </Link>
@@ -144,8 +146,11 @@ export default function CustomerSupportOutsourcingPage() {
       </section>
 
       <footer className="border-t border-slate-200 px-5 py-7 sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 text-sm text-slate-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} SPS Nexus Tech</p>
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-4 text-sm text-slate-500 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-2">
+            <img src="/sps-nexus-tech-official-logo.png" alt="SPS Nexus Tech" className="h-10 w-auto max-w-[190px] object-contain" />
+            <p>© {new Date().getFullYear()} SPS Nexus Tech</p>
+          </div>
           <div className="flex gap-5">
             <Link href="/privacy" className="hover:text-slate-900">Privacy</Link>
             <Link href="/business" className="hover:text-slate-900">Business services</Link>
