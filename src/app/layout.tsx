@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Customer Experience & Contact Centre Consulting | SPS Nexus Tech",
+  title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
   description:
-    "Remote customer experience and contact centre consulting for businesses worldwide. Improve support workflows, service quality and practical AI readiness.",
+    "Explore business consulting, customer experience, AI adoption, operations, career support, hiring guidance and SPS Nexus Tech outsourcing with Abhishek Shukla.",
   keywords: [
     "Abhishek Shukla",
     "customer experience consultant",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com",
-    title: "SPS Nexus Tech | Customer Experience & Contact Centre Consulting",
+    title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
     description:
-      "Practical customer experience, contact centre operations and AI-readiness consulting for organizations worldwide.",
+      "Business and professional services spanning customer experience, AI adoption, operations, career support, hiring and SPS Nexus Tech outsourcing.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
     card: "summary_large_image",
     title: "Abhishek Shukla | CX, AI Adoption & Operations Consultant",
     description:
-      "Practical consulting for customer experience, AI adoption, operational improvement and leadership.",
+      "Business consulting, CX, AI adoption, operations, career support, hiring and SPS Nexus Tech outsourcing.",
     creator: "@Abhishek1610200",
   },
   robots: {
