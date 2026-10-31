@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
   description:
-    "Explore business consulting in customer experience, AI adoption, operations, analytics and leadership, plus career support, hiring guidance and SPS Nexus Tech outsourcing.",
+    "Business consulting in CX, AI, operations and analytics; career, job-search, interview and LinkedIn support; hiring guidance and SPS Nexus Tech outsourcing.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     url: "https://www.iabhishekshukla.com/",
     title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
     description:
-      "Explore business consulting in customer experience, AI adoption, operations, analytics and leadership, plus career support, hiring guidance and SPS Nexus Tech outsourcing.",
+      "Business consulting in CX, AI, operations and analytics; career, job-search, interview and LinkedIn support; hiring guidance and SPS Nexus Tech outsourcing.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
     card: "summary_large_image",
     title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
     description:
-      "Explore business consulting in customer experience, AI adoption, operations, analytics and leadership, plus career support, hiring guidance and SPS Nexus Tech outsourcing.",
+      "Business consulting in CX, AI, operations and analytics; career, job-search, interview and LinkedIn support; hiring guidance and SPS Nexus Tech outsourcing.",
     creator: "@Abhishek1610200",
   },
 };
