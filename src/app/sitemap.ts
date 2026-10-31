@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteUrl}/ai-readiness-consulting`,
-      lastModified: seoMetadataLastModified,
+      lastModified: contentLastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
