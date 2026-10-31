@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.iabhishekshukla.com/customer-experience-consulting",
     title: "Customer Experience Consulting for Businesses | Abhishek Shukla",
     description:
-      "Identify customer friction, review service workflows, and prioritize measurable improvements to customer experience and support operations.",
+      "Improve customer journeys, service quality, contact centre performance and support operations with practical customer experience consulting.",
     siteName: "iAbhishekShukla.com",
   },
 };
