@@ -91,11 +91,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/90 backdrop-blur-md border-b border-slate-200 py-3" 
-          : "bg-transparent py-5"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/95 py-3 backdrop-blur-md transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
@@ -103,9 +99,9 @@ export default function Navigation() {
           <img
             src="/sps-nexus-tech-official-logo.png"
             alt="SPS Nexus Tech"
-            className="h-auto w-[220px] max-w-[35vw] rounded-md bg-white p-1 object-contain shadow-sm"
+            className="h-auto w-[220px] max-w-[48vw] object-contain"
           />
-          <span className={`font-bold tracking-tight hidden sm:block ${isScrolled ? 'text-slate-900' : 'text-white'} group-hover:text-[#0284c7] transition-colors`}>
+          <span className={`font-bold tracking-tight hidden sm:block text-slate-900 group-hover:text-[#0284c7] transition-colors`}>
             Abhishek Shukla
           </span>
         </a>
@@ -116,7 +112,7 @@ export default function Navigation() {
             if (group.items) {
               return (
                 <div key={idx} className="relative group">
-                  <button className={`flex items-center gap-1 text-sm font-semibold transition-colors ${isScrolled ? 'text-slate-700 hover:text-[#0284c7]' : 'text-white/90 hover:text-white'}`}>
+                  <button className={`flex items-center gap-1 text-sm font-semibold transition-colors text-slate-700 hover:text-[#0284c7]`}>
                     {group.label}
                     <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                   </button>
@@ -158,9 +154,7 @@ export default function Navigation() {
             target="_blank"
             rel="noopener noreferrer"
             className={`group flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-md ${
-              isScrolled 
-                ? 'bg-[#0284c7] text-white hover:bg-sky-600' 
-                : 'bg-white text-slate-900 hover:bg-slate-100'
+              'bg-[#0284c7] text-white hover:bg-sky-600'
             }`}
           >
             <Calendar className="w-4 h-4" />
@@ -170,7 +164,7 @@ export default function Navigation() {
 
         {/* Mobile Toggle */}
         <button
-          className={`lg:hidden p-2 z-50 relative ${isMobileMenuOpen ? 'text-slate-900' : (isScrolled ? 'text-slate-900' : 'text-white')}`}
+          className="lg:hidden p-2 z-50 relative text-slate-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
