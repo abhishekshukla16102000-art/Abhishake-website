@@ -44,19 +44,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteUrl}/insights`,
-      lastModified: seoMetadataLastModified,
+      lastModified: contentLastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${siteUrl}/insights/ai-readiness-checklist`,
-      lastModified: seoMetadataLastModified,
+      lastModified: contentLastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${siteUrl}/insights/contact-centre-kpis-before-ai`,
-      lastModified: seoMetadataLastModified,
+      lastModified: contentLastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
