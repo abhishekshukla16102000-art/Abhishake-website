@@ -3,17 +3,17 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Handshake, Users, Workflow } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Centre Performance & BPO Consulting | SPS Nexus Tech",
+  title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
   description:
-    "Review contact centre workflows, customer service quality, agent handoffs and AI readiness. Remote advisory for BPO and support teams, including US and Canadian businesses.",
+    "Explore contact centre and BPO consulting for customer support workflows, service quality, agent handoffs and practical AI readiness. Remote advisory for support teams.",
   alternates: { canonical: "/contact-centre-bpo-consulting" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com/contact-centre-bpo-consulting",
-    title: "Contact Centre Performance & BPO Consulting | SPS Nexus Tech",
+    title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
     description:
-      "Practical guidance on contact centre performance, customer support workflows and responsible AI readiness for service teams.",
+      "Explore contact centre and BPO consulting for customer support workflows, service quality, agent handoffs and practical AI readiness.",
     siteName: "iAbhishekShukla.com",
   },
 };

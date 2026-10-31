@@ -3,24 +3,24 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Customer Support Outsourcing | SPS Nexus Tech",
+  title: "Customer Support Outsourcing Services | SPS Nexus Tech",
   description:
-    "Explore customer support outsourcing, contact centre operations, service quality, and flexible delivery planning tailored to your business needs.",
+    "Explore a partner-led approach to customer support outsourcing, contact centre operations, service quality and delivery planning with SPS Nexus Tech. Discuss your requirements before committing.",
   alternates: { canonical: "/customer-support-outsourcing" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.iabhishekshukla.com/customer-support-outsourcing",
-    title: "Customer Support Outsourcing Worldwide | SPS Nexus Tech",
+    title: "Customer Support Outsourcing Services | SPS Nexus Tech",
     description:
-      "A practical approach to defining customer support needs, delivery fit, and quality expectations.",
+      "Discuss customer support requirements, coverage, channels, service quality and delivery fit with SPS Nexus Tech.",
     siteName: "SPS Nexus Tech",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Customer Support Outsourcing | SPS Nexus Tech",
+    title: "Customer Support Outsourcing Services | SPS Nexus Tech",
     description:
-      "Explore customer support outsourcing, contact centre operations, and service quality.",
+      "Explore customer support outsourcing, contact centre operations, service quality and delivery planning with SPS Nexus Tech.",
     creator: "@Abhishek1610200",
   },
 };

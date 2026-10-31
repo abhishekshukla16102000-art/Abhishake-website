@@ -3,24 +3,24 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customer Experience & Contact Centre Consulting | SPS Nexus Tech",
+  title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
   description:
-    "Remote customer experience and contact centre consulting for businesses worldwide. Improve support workflows, service quality and practical AI readiness.",
+    "Business consulting in CX, AI, operations and analytics; career, job-search, interview and LinkedIn support; hiring guidance and SPS Nexus Tech outsourcing.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com/",
-    title: "Customer Experience & Contact Centre Consulting | SPS Nexus Tech",
+    title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
     description:
-      "Remote customer experience and contact centre consulting for businesses worldwide. Improve support workflows, service quality and practical AI readiness.",
+      "Business consulting in CX, AI, operations and analytics; career, job-search, interview and LinkedIn support; hiring guidance and SPS Nexus Tech outsourcing.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Customer Experience & Contact Centre Consulting | SPS Nexus Tech",
+    title: "Abhishek Shukla | Business, CX, AI & Career Consulting",
     description:
-      "Remote customer experience and contact centre consulting for businesses worldwide. Improve support workflows, service quality and practical AI readiness.",
+      "Business consulting in CX, AI, operations and analytics; career, job-search, interview and LinkedIn support; hiring guidance and SPS Nexus Tech outsourcing.",
     creator: "@Abhishek1610200",
   },
 };

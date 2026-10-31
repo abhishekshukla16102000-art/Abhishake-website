@@ -27,24 +27,24 @@ const inquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
 )}`;
 
 export const metadata: Metadata = {
-  title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
+  title: "Business Consulting in CX, AI & Operations | Abhishek Shukla",
   description:
-    "Explore customer support, contact centre improvement and partner-led BPO opportunities for businesses worldwide. Scope delivery, quality and responsibilities before committing.",
+    "Explore practical business consulting in customer experience, AI adoption, operations and performance improvement with Abhishek Shukla. Discuss your team’s priorities and next steps.",
   alternates: { canonical: "/business" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.iabhishekshukla.com/business",
-    title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
+    title: "Business Consulting in CX, AI & Operations | Abhishek Shukla",
     description:
-      "Discuss customer support requirements, contact centre performance and a potential partner-led delivery route with SPS Nexus Tech.",
+      "Explore customer experience, AI readiness and operational improvement services for organizations, alongside SPS Nexus Tech partnership opportunities.",
     siteName: "iAbhishekShukla.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Customer Support & BPO Partnerships | SPS Nexus Tech",
+    title: "Business Consulting in CX, AI & Operations | Abhishek Shukla",
     description:
-      "Discuss customer support requirements, contact centre performance and a potential partner-led delivery route with SPS Nexus Tech.",
+      "Explore customer experience, AI readiness and operational improvement services for organizations, alongside SPS Nexus Tech partnership opportunities.",
     creator: "@Abhishek1610200",
   },
 };
