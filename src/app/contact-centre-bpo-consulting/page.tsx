@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.iabhishekshukla.com/contact-centre-bpo-consulting",
     title: "Contact Centre & BPO Consulting | SPS Nexus Tech",
     description:
-      "Practical guidance on contact centre performance, customer support workflows and responsible AI readiness for service teams.",
+      "Explore contact centre and BPO consulting for customer support workflows, service quality, agent handoffs and practical AI readiness.",
     siteName: "iAbhishekShukla.com",
   },
 };
