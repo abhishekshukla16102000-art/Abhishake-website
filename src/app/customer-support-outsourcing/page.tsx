@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Customer Support Outsourcing Services | SPS Nexus Tech",
     description:
-      "Explore customer support outsourcing, contact centre operations, and service quality.",
+      "Explore customer support outsourcing, contact centre operations, service quality and delivery planning with SPS Nexus Tech.",
     creator: "@Abhishek1610200",
   },
 };
