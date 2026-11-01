@@ -9,13 +9,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-4 inline-flex min-h-[76px] w-[190px] items-center justify-start rounded-lg bg-white px-3 py-2">
+            <div className="mb-4 inline-flex min-h-[82px] w-[250px] max-w-full items-center justify-start rounded-lg bg-white px-4 py-2">
               <img
                 src="/sps-nexus-tech-official-logo-dark.png"
                 alt="SPS Nexus Tech"
-                width="164"
-                height="60"
-                className="block h-auto max-h-[60px] w-[164px] object-contain object-left"
+                width="220"
+                height="61"
+                className="block h-auto w-[220px] max-w-full object-contain object-left"
               />
             </div>
             <p className="text-sm text-slate-400 max-w-md mb-6">
