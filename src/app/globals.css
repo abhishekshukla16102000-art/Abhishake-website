@@ -152,7 +152,6 @@ body {
   background-clip: text;
 }
 
-
 /* Subtle 3D depth for interactive panels across the site */
 .card-3d {
   transform: perspective(1200px) translateZ(0);
@@ -175,19 +174,6 @@ body {
 .depth-shell {
   transform-style: preserve-3d;
   perspective: 1400px;
-}
-
-/* Keep supporting text comfortably readable across the site. */
-@layer utilities {
-  .text-sm {
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-
-  .text-xs {
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
