@@ -54,16 +54,16 @@ export default function Navigation() {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 py-2 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6">
-        {/* Compact brand lockup: keep the supplied logo proportional and the header balanced. */}
+        {/* Small, proportional brand mark keeps the navigation visually balanced. */}
         <a
           href="#home"
           onClick={(e) => handleLinkClick(e, "#home")}
-          className="group z-50 flex shrink-0 items-center gap-3"
+          className="group z-50 flex shrink-0 items-center gap-2"
         >
           <img
             src="/sps-nexus-tech-official-logo.png"
             alt="SPS Nexus Tech"
-            className="h-[72px] w-[102px] object-contain sm:h-[76px] sm:w-[108px]"
+            className="h-[48px] w-[68px] object-contain sm:h-[54px] sm:w-[76px]"
           />
           <span className="hidden text-sm font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-[#0284c7] sm:block">
             Abhishek Shukla
