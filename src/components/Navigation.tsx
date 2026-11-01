@@ -1,81 +1,43 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X, Download, Calendar, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { Menu, X, Calendar, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navGroups = [
-  { label: 'Home', href: '#home' },
-  { 
-    label: 'Services', 
+  { label: "Home", href: "#home" },
+  {
+    label: "Services",
     items: [
-      { label: 'For Organizations', href: '#organizations' },
-      { label: 'For Professionals', href: '#professionals' },
-      { label: 'Talent & Hiring', href: '#talent' },
-    ]
+      { label: "For Organizations", href: "#organizations" },
+      { label: "For Professionals", href: "#professionals" },
+      { label: "Talent & Hiring", href: "#talent" },
+    ],
   },
   {
-    label: 'Insights',
+    label: "Insights",
     items: [
-      { label: 'Resources', href: '#resources' },
-      { label: 'Leadership', href: '#leadership' },
-      { label: 'Book', href: '#book' },
-      { label: 'All Insights', href: '/insights' },
-    ]
+      { label: "Resources", href: "#resources" },
+      { label: "Leadership", href: "#leadership" },
+      { label: "Book", href: "#book" },
+      { label: "All Insights", href: "/insights" },
+    ],
   },
   {
-    label: 'About',
+    label: "About",
     items: [
-      { label: 'Overview', href: '#about' },
-      { label: 'Credentials', href: '#credentials' },
-      { label: 'Collaborations', href: '#collaborations' },
-    ]
+      { label: "Overview", href: "#about" },
+      { label: "Credentials", href: "#credentials" },
+      { label: "Collaborations", href: "#collaborations" },
+    ],
   },
-  { label: 'Outsourcing', href: '/customer-support-outsourcing' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Outsourcing", href: "/customer-support-outsourcing" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    const sections = siteConfig.navLinks.map((link) =>
-      document.getElementById(link.href.replace("#", ""))
-    );
-    
-    sections.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
@@ -90,40 +52,42 @@ export default function Navigation() {
   };
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/95 py-3 backdrop-blur-md transition-all duration-300"
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="group flex items-center gap-2 z-50">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 py-2 shadow-sm backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6">
+        {/* Compact brand lockup: keep the supplied logo proportional and the header balanced. */}
+        <a
+          href="#home"
+          onClick={(e) => handleLinkClick(e, "#home")}
+          className="group z-50 flex shrink-0 items-center gap-3"
+        >
           <img
             src="/sps-nexus-tech-official-logo.png"
             alt="SPS Nexus Tech"
-            className="h-auto w-[220px] max-w-[48vw] object-contain"
+            className="h-[72px] w-[102px] object-contain sm:h-[76px] sm:w-[108px]"
           />
-          <span className={`font-bold tracking-tight hidden sm:block text-slate-900 group-hover:text-[#0284c7] transition-colors`}>
+          <span className="hidden text-sm font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-[#0284c7] sm:block">
             Abhishek Shukla
           </span>
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-6">
           {navGroups.map((group, idx) => {
             if (group.items) {
               return (
-                <div key={idx} className="relative group">
-                  <button className={`flex items-center gap-1 text-sm font-semibold transition-colors text-slate-700 hover:text-[#0284c7]`}>
+                <div key={idx} className="group relative">
+                  <button className="flex items-center gap-1 text-sm font-semibold text-slate-700 transition-colors hover:text-[#0284c7]">
                     {group.label}
-                    <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
+                    <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
                   </button>
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-48">
-                    <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 flex flex-col">
+                  <div className="invisible absolute left-1/2 top-full w-48 -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                    <div className="flex flex-col rounded-xl border border-slate-100 bg-white p-2 shadow-xl">
                       {group.items.map((item, itemIdx) => (
                         <a
                           key={itemIdx}
                           href={item.href}
                           onClick={(e) => handleLinkClick(e, item.href)}
-                          className="px-4 py-2.5 text-sm text-slate-600 hover:text-[#0284c7] hover:bg-slate-50 rounded-lg font-medium transition-colors"
+                          className="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-[#0284c7]"
                         >
                           {item.label}
                         </a>
@@ -139,7 +103,7 @@ export default function Navigation() {
                 key={idx}
                 href={group.href!}
                 onClick={(e) => handleLinkClick(e, group.href!)}
-                className={`text-sm font-semibold transition-colors ${isScrolled ? 'text-slate-700 hover:text-[#0284c7]' : 'text-white/90 hover:text-white'}`}
+                className="text-sm font-semibold text-slate-700 transition-colors hover:text-[#0284c7]"
               >
                 {group.label}
               </a>
@@ -148,27 +112,26 @@ export default function Navigation() {
         </div>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden items-center gap-4 md:flex">
           <a
             href={siteConfig.social.topmate}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-md ${
-              'bg-[#0284c7] text-white hover:bg-sky-600'
-            }`}
+            className="group flex items-center gap-2 rounded-full bg-[#0284c7] px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:bg-sky-600"
           >
-            <Calendar className="w-4 h-4" />
+            <Calendar className="h-4 w-4" />
             Book a Call
           </a>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-2 z-50 relative text-slate-900"
+          className="relative z-50 p-2 text-slate-900 lg:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
+          aria-expanded={isMobileMenuOpen}
         >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
@@ -180,21 +143,23 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-0 bg-white z-40 lg:hidden overflow-y-auto pt-24 pb-10 px-6"
+            className="fixed inset-0 top-0 z-40 overflow-y-auto bg-white px-6 pb-10 pt-24 lg:hidden"
           >
             <div className="flex flex-col gap-6">
               {navGroups.map((group, idx) => (
                 <div key={idx} className="border-b border-slate-100 pb-4">
                   {group.items ? (
                     <>
-                      <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">{group.label}</div>
+                      <div className="mb-4 text-xs font-bold uppercase tracking-wider text-slate-400">
+                        {group.label}
+                      </div>
                       <div className="flex flex-col gap-4 pl-4">
                         {group.items.map((item, itemIdx) => (
                           <a
                             key={itemIdx}
                             href={item.href}
                             onClick={(e) => handleLinkClick(e, item.href)}
-                            className="text-xl font-bold text-slate-900"
+                            className="text-lg font-bold text-slate-900"
                           >
                             {item.label}
                           </a>
@@ -205,21 +170,21 @@ export default function Navigation() {
                     <a
                       href={group.href!}
                       onClick={(e) => handleLinkClick(e, group.href!)}
-                      className="text-xl font-bold text-slate-900 block"
+                      className="block text-lg font-bold text-slate-900"
                     >
                       {group.label}
                     </a>
                   )}
                 </div>
               ))}
-              
+
               <a
                 href={siteConfig.social.topmate}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-4 mt-4 bg-[#0284c7] text-white rounded-xl font-bold text-lg shadow-md"
+                className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0284c7] py-4 text-base font-bold text-white shadow-md"
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="h-5 w-5" />
                 Book a Call
               </a>
             </div>
