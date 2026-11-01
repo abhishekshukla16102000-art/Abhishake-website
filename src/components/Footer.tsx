@@ -9,15 +9,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-4 inline-flex min-h-[82px] w-[250px] max-w-full items-center justify-start rounded-lg bg-white px-4 py-2">
-              <img
-                src="/sps-nexus-tech-official-logo-dark.png"
-                alt="SPS Nexus Tech"
-                width="220"
-                height="61"
-                className="block h-auto w-[220px] max-w-full object-contain object-left"
-              />
-            </div>
             <p className="text-sm text-slate-400 max-w-md mb-6">
               CX & AI Leader | Consultant | Project Leader | Author
             </p>
@@ -48,7 +39,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-white font-bold mb-6">Navigation</h4>
             <ul className="space-y-3 text-sm">
@@ -63,7 +54,7 @@ export default function Footer() {
               <li><Link href="#contact" className="hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-white font-bold mb-6">Legal</h4>
             <ul className="space-y-3 text-sm">
@@ -74,7 +65,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
           <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
           <p>{siteConfig.location}</p>
