@@ -12,7 +12,8 @@ export default function Footer() {
             <img
               src="/sps-nexus-tech-official-logo-dark.png"
               alt="SPS Nexus Tech"
-              className="mb-4 h-14 w-auto max-w-[250px] object-contain"
+              width="180"
+              className="mb-4 block h-auto w-[180px] max-w-full object-contain object-left"
             />
             <p className="text-sm text-slate-400 max-w-md mb-6">
               CX & AI Leader | Consultant | Project Leader | Author
@@ -40,40 +41,37 @@ export default function Footer() {
                 Book
               </a>
               <a href="https://topmate.io/abhishek_shukla1610/new/I8kTKarXVh" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition">
-                E-Book
+                Schedule
               </a>
             </div>
           </div>
-          
           <div>
-            <h4 className="text-white font-bold mb-6">Navigation</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="#organizations" className="hover:text-white transition">Organizations</Link></li>
-              <li><Link href="#professionals" className="hover:text-white transition">Professionals</Link></li>
-              <li><Link href="#talent" className="hover:text-white transition">Talent & Hiring</Link></li>
-              <li><Link href="#collaborations" className="hover:text-white transition">Collaborations</Link></li>
-              <li><Link href="#resources" className="hover:text-white transition">Resources</Link></li>
-              <li><Link href="#book" className="hover:text-white transition">Book</Link></li>
-              <li><Link href="#insights" className="hover:text-white transition">Insights</Link></li>
-              <li><Link href="#about" className="hover:text-white transition">About</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition">Contact</Link></li>
-            </ul>
+            <h3 className="text-white font-semibold mb-4">Explore</h3>
+            <div className="flex flex-col gap-3 text-sm">
+              <Link href="#organizations" className="hover:text-white transition">Organizations</Link>
+              <Link href="#professionals" className="hover:text-white transition">Professionals</Link>
+              <Link href="#talent" className="hover:text-white transition">Talent & Hiring</Link>
+              <Link href="#collaborations" className="hover:text-white transition">Collaborations</Link>
+              <Link href="#resources" className="hover:text-white transition">Resources</Link>
+              <Link href="#book" className="hover:text-white transition">Book</Link>
+              <Link href="/insights" className="hover:text-white transition">Insights</Link>
+              <Link href="#about" className="hover:text-white transition">About</Link>
+              <Link href="#contact" className="hover:text-white transition">Contact</Link>
+            </div>
           </div>
-          
           <div>
-            <h4 className="text-white font-bold mb-6">Legal</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition">Terms</Link></li>
-              <li><Link href="/disclaimer" className="hover:text-white transition">Disclaimer</Link></li>
-              <li><Link href="/refund" className="hover:text-white transition">Refund Policy</Link></li>
-            </ul>
+            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <div className="flex flex-col gap-3 text-sm">
+              <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-white transition">Terms</Link>
+              <Link href="/disclaimer" className="hover:text-white transition">Disclaimer</Link>
+              <Link href="/refund-policy" className="hover:text-white transition">Refund Policy</Link>
+            </div>
           </div>
         </div>
-        
-        <div className="pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
-          <p>{siteConfig.location}</p>
+        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+          <p>© {currentYear} Abhishek Shukla. All rights reserved.</p>
+          <p>Delhi, India (Global Remote)</p>
         </div>
       </div>
     </footer>
