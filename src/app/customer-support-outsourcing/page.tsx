@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SpsBpoEnquiryForm from "@/components/SpsBpoEnquiryForm";
+import SpsFaqAccordion from "@/components/SpsFaqAccordion";
 import { ArrowRight, CheckCircle2, Headset, PhoneCall, Users, ClipboardCheck, Mail, ShoppingBag } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -261,24 +262,7 @@ export default function CustomerSupportOutsourcingPage() {
         </div>
       </section>
 
-      <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-300">
-            Frequently asked questions
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Before you start a conversation
-          </h2>
-          <div className="mt-8 divide-y divide-white/10">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="py-5">
-                <h3 className="text-lg font-semibold">{faq.question}</h3>
-                <p className="mt-2 leading-7 text-slate-300">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <SpsFaqAccordion />
 
       <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-20">
         <div className="mx-auto max-w-6xl">
