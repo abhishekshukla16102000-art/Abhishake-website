@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SpsBpoEnquiryForm from "@/components/SpsBpoEnquiryForm";
 import { ArrowRight, CheckCircle2, Headset, PhoneCall, Users, ClipboardCheck, Mail, ShoppingBag } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -106,28 +107,6 @@ const faqs = [
 ];
 
 export default function CustomerSupportOutsourcingPage() {
-  const enquiryBody = [
-    "Hello SPS Nexus Tech,",
-    "",
-    "I would like to discuss a customer support / call centre / BPO requirement.",
-    "",
-    "Company name and website:",
-    "Country / time zone:",
-    "Contact person and role:",
-    "Service required (inbound / outbound / email / order support / back office):",
-    "Expected calls or cases per day/month:",
-    "Required working hours and languages:",
-    "Systems or tools to be used:",
-    "Target start date:",
-    "Any other requirements:",
-    "",
-    "Regards,",
-  ].join("\n");
-
-  const enquiryHref = `mailto:abhishek@iabhishekshukla.com?subject=${encodeURIComponent(
-    "BPO / Call Centre Project Enquiry - SPS Nexus Tech"
-  )}&body=${encodeURIComponent(enquiryBody)}`;
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -155,7 +134,7 @@ export default function CustomerSupportOutsourcingPage() {
             />
           </Link>
           <a
-            href={enquiryHref}
+            href="#project-enquiry"
             className="inline-flex min-h-10 items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
           >
             Discuss a project <ArrowRight size={15} aria-hidden="true" />
@@ -176,7 +155,7 @@ export default function CustomerSupportOutsourcingPage() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href={enquiryHref}
+              href="#project-enquiry"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300"
             >
               Request a project discussion <ArrowRight size={17} aria-hidden="true" />
@@ -301,26 +280,9 @@ export default function CustomerSupportOutsourcingPage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-5xl rounded-3xl bg-sky-50 p-7 sm:p-10">
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-800">
-            Let's discuss your project
-          </p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            Tell us what support your business needs
-          </h2>
-          <p className="mt-4 max-w-2xl leading-7 text-slate-700">
-            Share your company details, service requirement, expected workload, and target start date. We will review the brief and discuss the next steps.
-          </p>
-          <a
-            href={enquiryHref}
-            className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-slate-700"
-          >
-            Send your BPO project enquiry <ArrowRight size={17} aria-hidden="true" />
-          </a>
-          <p className="mt-5 text-sm text-slate-600">
-            Email: abhishek@iabhishekshukla.com · SPS Nexus Tech
-          </p>
+      <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <SpsBpoEnquiryForm />
         </div>
       </section>
 
