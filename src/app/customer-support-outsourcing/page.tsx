@@ -1,146 +1,325 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Handshake } from "lucide-react";
+import { ArrowRight, CheckCircle2, Headset, PhoneCall, Users, ClipboardCheck, Mail, ShoppingBag } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Customer Support Outsourcing Services | SPS Nexus Tech",
+  title: "Call Centre & Customer Support Outsourcing | SPS Nexus Tech",
   description:
-    "Explore a partner-led approach to customer support outsourcing, contact centre operations, service quality and delivery planning with SPS Nexus Tech. Discuss your requirements before committing.",
+    "Explore human-led call centre and BPO support with SPS Nexus Tech. Inbound and outbound calling, customer queries, order support and back-office services, scoped to your project.",
   alternates: { canonical: "/customer-support-outsourcing" },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: "https://www.iabhishekshukla.com/customer-support-outsourcing",
-    title: "Customer Support Outsourcing Services | SPS Nexus Tech",
+    title: "Call Centre & Customer Support Outsourcing | SPS Nexus Tech",
     description:
-      "Discuss customer support requirements, coverage, channels, service quality and delivery fit with SPS Nexus Tech.",
+      "Discuss project-based, human-led customer support, inbound and outbound calling, order support and back-office operations with SPS Nexus Tech.",
     siteName: "SPS Nexus Tech",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Customer Support Outsourcing Services | SPS Nexus Tech",
+    title: "Call Centre & Customer Support Outsourcing | SPS Nexus Tech",
     description:
-      "Explore customer support outsourcing, contact centre operations, service quality and delivery planning with SPS Nexus Tech.",
+      "Human-led customer support, inbound and outbound calling, order support and project-based BPO operations.",
     creator: "@Abhishek1610200",
   },
 };
 
-const planningPoints = [
-  "Customer enquiries across agreed channels, such as email, chat, or voice",
-  "Defined support hours, language requirements, expected volumes, and escalation rules",
-  "Knowledge-base, response-quality, reporting, and supervisor requirements",
-  "Clear ownership for sensitive cases, exceptions, complaints, and customer data",
+const services = [
+  {
+    icon: PhoneCall,
+    title: "Inbound call handling",
+    text: "Customer enquiries, product or service questions, appointment requests, and agreed call-routing or escalation workflows.",
+  },
+  {
+    icon: Headset,
+    title: "Outbound calling",
+    text: "Customer follow-ups, lead qualification, appointment confirmation, feedback calls, and other clearly scoped calling campaigns.",
+  },
+  {
+    icon: Mail,
+    title: "Customer query support",
+    text: "Email and other agreed customer communication queues, with response guidelines, escalation rules, and quality checks defined in advance.",
+  },
+  {
+    icon: ShoppingBag,
+    title: "E-commerce and order support",
+    text: "Order-status questions, delivery updates, returns and exchange enquiries, and customer follow-ups based on your policies.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Back-office operations",
+    text: "Project-defined administrative tasks, data entry, documentation, verification, and routine process support.",
+  },
+  {
+    icon: Users,
+    title: "Project-based team setup",
+    text: "Recruitment, role-specific training, supervision planning, and delivery preparation based on the agreed contract and workload.",
+  },
 ];
 
-const process = [
+const deliverySteps = [
   {
-    title: "1. Define the support requirement",
-    text: "Describe your customers, channels, operating hours, expected volume, language needs, current pain points, and service-level expectations.",
+    title: "1. Share your requirement",
+    text: "Tell us about your business, customer type, channels, expected volumes, working hours, languages, and target start date.",
   },
   {
-    title: "2. Check delivery fit before promising a service",
-    text: "We assess the requirement, operating needs, service expectations, and commercial fit to shape a practical delivery plan.",
+    title: "2. Confirm scope and feasibility",
+    text: "We review the workload, staffing profile, training needs, systems, quality expectations, data handling, and commercial fit before making a commitment.",
   },
   {
-    title: "3. Agree scope, measures, and responsibilities",
-    text: "Before work begins, the parties should agree on the contract, pricing, data handling, escalation ownership, reporting, quality checks, and a realistic start plan.",
+    title: "3. Agree the contract and plan",
+    text: "Both sides confirm pricing, responsibilities, service measures, escalation paths, reporting, security requirements, and launch milestones in writing.",
+  },
+  {
+    title: "4. Prepare the project team",
+    text: "After the contract is signed, project-specific recruitment and training can be arranged against the approved requirements and agreed start plan.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What customer support services can SPS Nexus Tech discuss?",
+    answer:
+      "We can assess inbound and outbound calling, customer query handling, e-commerce and order support, email support, appointment follow-ups, and project-defined back-office work.",
+  },
+  {
+    question: "Do you already have a large, ready-to-deploy team?",
+    answer:
+      "Staffing is planned around each signed project. Once the scope, commercial terms, and requirements are agreed in a contract, project-specific recruitment and training can be arranged. Team size and start dates are confirmed before launch.",
+  },
+  {
+    question: "Can you support businesses outside India?",
+    answer:
+      "We are open to discussing international projects. Country, time-zone coverage, language needs, data-protection obligations, systems access, and commercial feasibility must be reviewed before confirming delivery.",
+  },
+  {
+    question: "How is pricing decided?",
+    answer:
+      "Pricing depends on the work type, expected volume, staffing profile, operating hours, training, systems, quality requirements, and contract duration. A proposal is prepared after the requirement is understood.",
+  },
+  {
+    question: "How do we get started?",
+    answer:
+      "Send a short brief with your company details, service requirement, expected workload, and target start date. We can then arrange an introductory discussion and assess fit.",
   },
 ];
 
 export default function CustomerSupportOutsourcingPage() {
+  const enquiryBody = [
+    "Hello SPS Nexus Tech,",
+    "",
+    "I would like to discuss a customer support / call centre / BPO requirement.",
+    "",
+    "Company name and website:",
+    "Country / time zone:",
+    "Contact person and role:",
+    "Service required (inbound / outbound / email / order support / back office):",
+    "Expected calls or cases per day/month:",
+    "Required working hours and languages:",
+    "Systems or tools to be used:",
+    "Target start date:",
+    "Any other requirements:",
+    "",
+    "Regards,",
+  ].join("\n");
+
   const enquiryHref = `mailto:abhishek@iabhishekshukla.com?subject=${encodeURIComponent(
-    "Customer Support Outsourcing Enquiry"
-  )}&body=${encodeURIComponent(
-    "Hello SPS Nexus Tech,\n\nI would like to discuss a customer-support requirement.\n\nCompany and website:\nMy role:\nChannels needed (voice, email, chat):\nLanguages and support hours:\nApproximate monthly contact volume:\nCurrent challenge and desired outcome:\nTarget start date:\n\nRegards,"
-  )}`;
+    "BPO / Call Centre Project Enquiry - SPS Nexus Tech"
+  )}&body=${encodeURIComponent(enquiryBody)}`;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
           <Link href="/" className="inline-flex items-center" aria-label="SPS Nexus Tech home">
-            <img src="/sps-nexus-tech-official-logo.png" alt="SPS Nexus Tech" className="h-12 w-auto max-w-[220px] object-contain" />
+            <img
+              src="/sps-nexus-tech-official-logo.png"
+              alt="SPS Nexus Tech"
+              className="h-12 w-auto max-w-[220px] object-contain"
+            />
           </Link>
-          <Link href="/business" className="text-sm font-semibold text-sky-800 hover:text-sky-600">
-            Business services <ArrowRight className="ml-1 inline" size={15} aria-hidden="true" />
-          </Link>
+          <a
+            href={enquiryHref}
+            className="inline-flex min-h-10 items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+          >
+            Discuss a project <ArrowRight size={15} aria-hidden="true" />
+          </a>
         </div>
       </header>
 
       <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-300">
-            Business Enquiries
+            SPS Nexus Tech · BPO & customer operations
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Customer support outsourcing, scoped before you commit
+            Human-led call centre and customer support outsourcing
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            SPS Nexus Tech helps businesses improve customer support through a tailored approach to contact centre operations, service quality, and delivery planning. We align the support model with your customer needs, operating hours, channels, and performance goals.
+            Looking for support with customer calls, follow-ups, service enquiries, or day-to-day operations? SPS Nexus Tech discusses project-based BPO support shaped around your workload, customer needs, operating hours, and quality expectations.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={enquiryHref} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300">
-              Discuss your support needs <ArrowRight size={17} aria-hidden="true" />
+            <a
+              href={enquiryHref}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300"
+            >
+              Request a project discussion <ArrowRight size={17} aria-hidden="true" />
             </a>
-            <Link href="/contact-centre-bpo-consulting" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
-              Explore CX and BPO consulting
-            </Link>
+            <a
+              href="#services"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+            >
+              Explore support services
+            </a>
           </div>
           <p className="mt-5 max-w-3xl text-sm leading-6 text-slate-400">
-            Flexible delivery planning: define the right coverage, channels, service levels, and operating model around your business requirements.
+            Every engagement is scoped before commitment. Staffing, coverage, pricing, and launch dates are confirmed against the signed project requirements.
           </p>
         </div>
       </section>
 
-      <section className="px-5 py-14 sm:px-8 sm:py-18">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-700">Start with the requirement</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">What a useful outsourcing brief should cover</h2>
-            <p className="mt-5 leading-7 text-slate-600">
-              A clear brief helps both sides determine whether the work is practical, what it will cost, and which responsibilities need to be agreed before launch.
+      <section id="services" className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-700">
+              Customer support and BPO services
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+              Practical support for the work your customers need done
+            </h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Start with one defined process or a wider customer-support requirement. The final scope is agreed around your volumes, customer journey, systems, and service expectations.
             </p>
           </div>
-          <ul className="space-y-4">
-            {planningPoints.map((point) => (
-              <li key={point} className="flex gap-3 rounded-xl border border-slate-200 p-4">
-                <CheckCircle2 className="mt-0.5 shrink-0 text-sky-700" size={21} aria-hidden="true" />
-                <span className="leading-6 text-slate-700">{point}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <article key={service.title} className="rounded-2xl border border-slate-200 p-6 transition hover:border-sky-300 hover:shadow-sm">
+                  <Icon className="text-sky-700" size={25} aria-hidden="true" />
+                  <h3 className="mt-4 text-xl font-semibold text-slate-950">{service.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-slate-600">{service.text}</p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      <section className="bg-slate-50 px-5 py-14 sm:px-8 sm:py-18">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-700">How the discussion works</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">A practical path from enquiry to a delivery decision</h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {process.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6">
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
+      <section className="bg-slate-50 px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-700">
+              Clear scope. Planned delivery.
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+              How a project moves from enquiry to launch
+            </h2>
+            <p className="mt-5 leading-7 text-slate-600">
+              We first understand what needs to be handled, then confirm whether the people, process, systems, and commercial model can support it.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {deliverySteps.map((step) => (
+              <article key={step.title} className="rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
+                <div className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 shrink-0 text-sky-700" size={21} aria-hidden="true" />
+                  <div>
+                    <h3 className="text-lg font-semibold">{step.title}</h3>
+                    <p className="mt-2 leading-7 text-slate-600">{step.text}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-14 sm:px-8 sm:py-18">
-        <div className="mx-auto max-w-4xl rounded-3xl bg-slate-950 p-7 text-white sm:p-10">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-400 text-slate-950">
-            <Handshake size={24} aria-hidden="true" />
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-700">
+              Built around your requirement
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+              What we need to prepare a useful proposal
+            </h2>
+            <p className="mt-4 leading-7 text-slate-600">
+              A short project brief helps us understand whether the requirement is a fit and what a realistic delivery plan should include.
+            </p>
           </div>
-          <h2 className="mt-5 text-3xl font-semibold tracking-tight">Tell us what your customers need</h2>
-          <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-            Share your support requirements, customer channels, and desired outcomes. We will discuss a practical approach aligned with your business goals.
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {[
+              "The service you want to outsource and the customer types involved",
+              "Estimated calls, emails, cases, or records per day or month",
+              "Required operating hours, time zone, languages, and coverage days",
+              "Existing scripts, SOPs, knowledge resources, and escalation rules",
+              "CRM, telephony, ticketing, and other systems the team must use",
+              "Quality measures, reporting needs, data controls, and target launch date",
+            ].map((item) => (
+              <div key={item} className="flex gap-3 rounded-xl border border-slate-200 p-4">
+                <CheckCircle2 className="mt-0.5 shrink-0 text-sky-700" size={20} aria-hidden="true" />
+                <span className="leading-6 text-slate-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-300">
+            Frequently asked questions
           </p>
-          <a href={enquiryHref} className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-300">
-            Send a business enquiry <ArrowRight size={17} aria-hidden="true" />
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Before you start a conversation
+          </h2>
+          <div className="mt-8 divide-y divide-white/10">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="py-5">
+                <h3 className="text-lg font-semibold">{faq.question}</h3>
+                <p className="mt-2 leading-7 text-slate-300">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl rounded-3xl bg-sky-50 p-7 sm:p-10">
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-800">
+            Let's discuss your project
+          </p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+            Tell us what support your business needs
+          </h2>
+          <p className="mt-4 max-w-2xl leading-7 text-slate-700">
+            Share your company details, service requirement, expected workload, and target start date. We will review the brief and discuss the next steps.
+          </p>
+          <a
+            href={enquiryHref}
+            className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-slate-700"
+          >
+            Send your BPO project enquiry <ArrowRight size={17} aria-hidden="true" />
           </a>
-          <p className="mt-5 text-sm leading-6 text-slate-400">
-            We work with you to define the right support model, service expectations, and delivery plan for your business.
+          <p className="mt-5 text-sm text-slate-600">
+            Email: abhishek@iabhishekshukla.com · SPS Nexus Tech
           </p>
         </div>
       </section>
@@ -148,7 +327,11 @@ export default function CustomerSupportOutsourcingPage() {
       <footer className="border-t border-slate-200 px-5 py-7 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-4 text-sm text-slate-500 sm:flex-row sm:items-center">
           <div className="flex flex-col gap-2">
-            <img src="/sps-nexus-tech-official-logo.png" alt="SPS Nexus Tech" className="h-10 w-auto max-w-[190px] object-contain" />
+            <img
+              src="/sps-nexus-tech-official-logo.png"
+              alt="SPS Nexus Tech"
+              className="h-10 w-auto max-w-[190px] object-contain"
+            />
             <p>© {new Date().getFullYear()} SPS Nexus Tech</p>
           </div>
           <div className="flex gap-5">
