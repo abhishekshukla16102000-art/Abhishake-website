@@ -265,3 +265,98 @@ export const websiteKnowledge: WebsitePassage[] = [
     tags: ["kpi", "metrics", "first contact resolution", "repeat contact", "quality", "service level", "wait time", "abandonment", "transfer", "escalation", "handling time", "ai automation"],
   },
 ];
+
+function getRelevantWords(query: string): string[] {
+  const stopWords = new Set([
+    "a", "an", "and", "are", "as", "at", "be", "can", "do", "does", "for", "from",
+    "get", "give", "have", "how", "i", "in", "is", "it", "me", "my", "of", "on",
+    "or", "please", "tell", "that", "the", "their", "them", "there", "this", "to",
+    "us", "we", "what", "when", "where", "which", "who", "why", "with", "you",
+    "your", "about", "would", "should", "could", "our", "more", "same", "much",
+    "many", "some", "any", "also", "looking", "like", "need", "want"
+  ]);
+  const aliases: Record<string, string> = {
+    center: "centre", centers: "centre", centres: "centre", callcenter: "centre",
+    calling: "call", calls: "call", called: "call", telephone: "phone",
+    costs: "pricing", cost: "pricing", price: "pricing", prices: "pricing",
+    fees: "pricing", fee: "pricing", rates: "pricing", rate: "pricing",
+    quote: "pricing", quotation: "pricing", quotations: "pricing",
+    employees: "staff", agent: "staff", agents: "staff", people: "staff",
+    team: "staff", teams: "staff", manpower: "staff", recruitment: "staff",
+    recruit: "staff", hiring: "staff", trained: "training",
+    jobs: "career", employment: "career", cv: "resume", interviews: "interview",
+    kpis: "kpi", measures: "metric", measurement: "metric", metrics: "metric",
+    dashboards: "dashboard", reports: "report", reporting: "report",
+    enquiries: "enquiry", inquiry: "enquiry", inquiries: "enquiry",
+    abroad: "overseas", global: "overseas",
+    processes: "process", workflows: "workflow", operations: "operation",
+    languages: "language", shifts: "shift", hours: "hour",
+    certificates: "credential", certifications: "credential",
+  };
+
+  return Array.from(new Set(
+    query
+      .toLowerCase()
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9\\s]/g, " ")
+      .split(/\\s+/)
+      .filter((word) => word.length > 1 && !stopWords.has(word))
+      .map((word) => aliases[word] ?? word)
+  ));
+}
+
+function normalise(value: string): string {
+  return value.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9\\s]/g, " ").replace(/\\s+/g, " ").trim();
+}
+
+export function searchWebsite(query: string, audience: "general" | "sps") {
+  const words = getRelevantWords(query);
+  if (!words.length) return [];
+
+  const documents = websiteKnowledge.map((passage) => ({
+    passage,
+    titleWords: new Set(getRelevantWords(passage.title)),
+    tagWords: new Set(getRelevantWords(passage.tags.join(" "))),
+    bodyWords: new Set(getRelevantWords(passage.content)),
+    allText: normalise(passage.title + " " + passage.tags.join(" ") + " " + passage.content),
+  }));
+
+  const documentFrequency = new Map<string, number>();
+  for (const doc of documents) {
+    for (const word of new Set([...doc.titleWords, ...doc.tagWords, ...doc.bodyWords])) {
+      documentFrequency.set(word, (documentFrequency.get(word) ?? 0) + 1);
+    }
+  }
+
+  const question = normalise(query);
+  const ranked = documents.map((doc) => {
+    let score = 0;
+    let matches = 0;
+    for (const word of words) {
+      const idf = 1 + Math.log((documents.length + 1) / ((documentFrequency.get(word) ?? 0) + 1));
+      let fieldScore = 0;
+      if (doc.titleWords.has(word)) fieldScore += 4.5;
+      if (doc.tagWords.has(word)) fieldScore += 3.5;
+      if (doc.bodyWords.has(word)) fieldScore += 1.1;
+      if (fieldScore > 0) matches += 1;
+      score += fieldScore * idf;
+    }
+
+    const phrases = doc.passage.tags.filter((tag) => {
+      const normalTag = normalise(tag);
+      return normalTag.length > 3 && question.includes(normalTag);
+    });
+    if (phrases.length) score += Math.min(phrases.length, 3) * 5.5;
+    if (question.length > 7 && doc.allText.includes(question)) score += 8;
+    if (audience === "sps" && doc.passage.audience === "sps") score *= 1.15;
+
+    const coverage = matches / Math.max(words.length, 1);
+    score *= 0.55 + coverage * 0.75;
+    return { passage: doc.passage, score, coverage };
+  });
+
+  return ranked
+    .filter((item) => item.score >= 5.5 && item.coverage >= 0.18)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+}
