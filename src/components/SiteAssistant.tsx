@@ -5,7 +5,6 @@ import type { FormEvent } from "react";
 
 type Variant = "site" | "sps";
 type LinkItem = { label: string; href: string };
-type Reply = { text: string; links?: LinkItem[] };
 type ChatMessage = {
   id: number;
   role: "assistant" | "visitor";
@@ -13,234 +12,36 @@ type ChatMessage = {
   links?: LinkItem[];
 };
 
-type KnowledgeEntry = {
-  keys: string[];
-  reply: Reply;
+type ChatResponse = {
+  answer?: string;
+  sources?: LinkItem[];
+  error?: string;
 };
-
-const contactLink: LinkItem = {
-  label: "Email Abhishek",
-  href: "mailto:abhishek@iabhishekshukla.com?subject=Website%20enquiry",
-};
-const bpoLink: LinkItem = {
-  label: "SPS NEXUS TECH services",
-  href: "/customer-support-outsourcing",
-};
-const enquiryLink: LinkItem = {
-  label: "Send a project enquiry",
-  href: "/customer-support-outsourcing#project-enquiry",
-};
-
-const spsKnowledge: KnowledgeEntry[] = [
-  {
-    keys: ["inbound", "outbound", "call centre", "call center", "calling", "phone support", "telephone", "bpo", "customer support", "customer service", "outsourcing", "sps nexus"],
-    reply: {
-      text: "SPS NEXUS TECH discusses human-led, project-based BPO and customer-support work. Areas include inbound and outbound calling, customer queries, email support, e-commerce and order enquiries, and defined back-office tasks. The final scope is agreed after reviewing your requirements.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["e commerce", "ecommerce", "order status", "delivery", "returns", "exchange", "shopping support"],
-    reply: {
-      text: "The SPS NEXUS TECH page includes e-commerce and order support, such as order-status questions, delivery updates, returns or exchange enquiries, and customer follow-ups based on your policies.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["back office", "data entry", "administrative", "admin work", "documentation", "verification"],
-    reply: {
-      text: "SPS NEXUS TECH can discuss project-defined back-office work, including administrative tasks, data entry, documentation, verification, and routine process support. The exact process and controls need to be agreed before launch.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["team", "staff", "employees", "agents", "recruit", "recruitment", "training", "team size", "ready team"],
-    reply: {
-      text: "Staffing is planned around each signed project. After the scope and commercial terms are agreed, project-specific recruitment and training can be arranged. Team size, coverage, and start dates are confirmed before launch rather than assumed in advance.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["international", "outside india", "overseas", "usa", "united states", "uk", "united kingdom", "uae", "dubai", "australia", "global"],
-    reply: {
-      text: "SPS NEXUS TECH is open to discussing international projects. Country, time zone, language requirements, data-protection obligations, systems access, and commercial feasibility are reviewed before confirming delivery.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["price", "pricing", "cost", "rate", "quote", "quotation", "budget", "charges"],
-    reply: {
-      text: "There is no one-size-fits-all public rate. Pricing depends on the work type, expected volume, staffing profile, operating hours, training, systems, quality requirements, and contract duration. Share the requirement to discuss a suitable proposal.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["start", "get started", "how to begin", "next step", "project process", "onboard", "onboarding"],
-    reply: {
-      text: "The usual first step is to share your service requirement, expected workload, operating hours, language needs, systems, quality expectations, and target start date. SPS NEXUS TECH can then review feasibility and discuss scope, pricing, responsibilities, and launch planning.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["language", "languages", "working hours", "time zone", "timezone", "24/7", "coverage", "weekend", "shift"],
-    reply: {
-      text: "Languages, operating hours, time-zone coverage, shift patterns, and service levels are confirmed for each project after the requirements and delivery feasibility have been reviewed.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["contact", "email", "talk", "speak", "meeting", "call you", "reach"],
-    reply: {
-      text: "You can send a project enquiry through the SPS NEXUS TECH form or email Abhishek directly. Include your company, the support process, expected volume, operating hours, and target start date.",
-      links: [enquiryLink, contactLink],
-    },
-  },
-  {
-    keys: ["human", "real person", "person", "are you a bot", "who am i speaking"],
-    reply: {
-      text: "I'm the website's automated assistant. I can answer common questions using the published SPS NEXUS TECH information. For a detailed discussion, please contact Abhishek directly.",
-      links: [contactLink],
-    },
-  },
-];
-
-const siteKnowledge: KnowledgeEntry[] = [
-  ...spsKnowledge,
-  {
-    keys: ["what services", "your services", "services", "what do you do", "what can you help", "business consulting", "consulting"],
-    reply: {
-      text: "This website brings together business and customer-experience consulting, AI readiness and adoption information, operations-related support, career guidance, and SPS NEXUS TECH outsourcing services. Choose the relevant area below or send a message for help finding the right page.",
-      links: [
-        { label: "Business services", href: "/business" },
-        { label: "AI readiness consulting", href: "/ai-readiness-consulting" },
-        { label: "SPS NEXUS TECH", href: "/customer-support-outsourcing" },
-      ],
-    },
-  },
-  {
-    keys: ["customer experience", "cx", "contact centre consulting", "contact center consulting", "call centre consulting", "call center consulting"],
-    reply: {
-      text: "The website includes contact-centre and customer-experience consulting information. For traditional outsourced calling, customer-query handling, or back-office project enquiries, visit the SPS NEXUS TECH page.",
-      links: [
-        { label: "Contact-centre consulting", href: "/contact-centre-bpo-consulting" },
-        bpoLink,
-      ],
-    },
-  },
-  {
-    keys: ["ai readiness", "ai adoption", "ai consulting", "artificial intelligence"],
-    reply: {
-      text: "The website includes information about AI readiness and adoption consulting. The right starting point depends on your organisation's goals and current processes.",
-      links: [{ label: "AI readiness consulting", href: "/ai-readiness-consulting" }, contactLink],
-    },
-  },
-  {
-    keys: ["career", "job search", "interview", "resume", "cv", "linkedin profile", "professional development"],
-    reply: {
-      text: "The website also covers career-related guidance, including job-search, interview, LinkedIn positioning, and professional-development topics. Send a message describing the support you need and Abhishek can direct you to the relevant information.",
-      links: [contactLink],
-    },
-  },
-  {
-    keys: ["abhishek", "founder", "who owns", "who runs", "about you", "about the website"],
-    reply: {
-      text: "This is Abhishek Shukla's website. It brings together his business and consulting work and the SPS NEXUS TECH outsourcing initiative. For a specific business or collaboration enquiry, you can contact him directly.",
-      links: [contactLink, bpoLink],
-    },
-  },
-  {
-    keys: ["collaboration", "partnership", "partner", "business opportunity", "work together"],
-    reply: {
-      text: "For a collaboration or business discussion, send a short note describing your organisation, the opportunity, and what you would like to explore. Abhishek can review the details and respond.",
-      links: [contactLink],
-    },
-  },
-  {
-    keys: ["contact", "email", "talk", "speak", "meeting", "reach"],
-    reply: {
-      text: "You can contact Abhishek by email. For traditional call-centre or BPO requirements, the SPS NEXUS TECH project enquiry page is also available.",
-      links: [contactLink, enquiryLink],
-    },
-  },
-  {
-    keys: ["human", "real person", "person", "are you a bot", "who am i speaking"],
-    reply: {
-      text: "I'm the website's self-hosted automated assistant. I answer common questions from prepared website information. I don't replace a direct conversation with Abhishek.",
-      links: [contactLink],
-    },
-  },
-];
 
 const suggestions = {
-  site: ["What services are available?", "Tell me about SPS NEXUS TECH", "How can I contact Abhishek?"],
-  sps: ["What BPO services do you offer?", "How is a project team arranged?", "How do I request a proposal?"],
+  site: [
+    "What services does Abhishek offer?",
+    "Tell me about Abhishek",
+    "What is SPS NEXUS TECH?",
+  ],
+  sps: [
+    "What BPO services do you offer?",
+    "How is the project team arranged?",
+    "How is pricing decided?",
+  ],
 };
 
-function normalise(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function findReply(question: string, variant: Variant): Reply {
-  const q = normalise(question);
-  const entries = variant === "sps" ? spsKnowledge : siteKnowledge;
-
-  if (variant === "sps" && /(^| )(ai|chatbot|automation)( |$)/.test(q)) {
-    return {
-      text: "This SPS NEXUS TECH page is focused on traditional, human-led BPO and customer-support services, including calling and customer-query handling. It does not present an AI-plus-human service offer.",
-      links: [enquiryLink],
-    };
-  }
-
-  if (/^(hi|hello|hey|good morning|good afternoon|good evening|namaste)$/.test(q)) {
-    return {
-      text: variant === "sps"
-        ? "Hello! I'm the SPS NEXUS TECH assistant. Ask me about human-led call-centre support, BPO services, project requirements, staffing, or proposals."
-        : "Hello! I'm the website assistant. I can help you find information about the website's services, consulting topics, and SPS NEXUS TECH.",
-    };
-  }
-
-  let best: KnowledgeEntry | undefined;
-  let bestScore = 0;
-
-  for (const entry of entries) {
-    let score = 0;
-    for (const key of entry.keys) {
-      const phrase = normalise(key);
-      if (!phrase) continue;
-      if (q.includes(phrase)) {
-        score += phrase.includes(" ") ? 3 : 1;
-      }
-    }
-    if (score > bestScore) {
-      best = entry;
-      bestScore = score;
-    }
-  }
-
-  if (best && bestScore >= 1) return best.reply;
-
-  return {
-    text: "I don't have a reliable answer for that yet, and I don't want to guess. Please send the question to Abhishek and the team can respond directly.",
-    links: variant === "sps" ? [enquiryLink, contactLink] : [contactLink, bpoLink],
-  };
-}
+const welcomeMessages = {
+  site: "Hi! I'm Abhishek's website assistant. I can help you explore his profile, consulting services, resources and SPS NEXUS TECH. What would you like to know?",
+  sps: "Hi! I'm the SPS NEXUS TECH assistant. I can help with our human-led calling, customer queries, e-commerce support, back-office services and project enquiries. What would you like to know?",
+};
 
 export default function SiteAssistant({ variant = "site" }: { variant?: Variant }) {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      id: 1,
-      role: "assistant",
-      text: variant === "sps"
-        ? "Welcome to SPS NEXUS TECH. I can help with our human-led BPO and customer-support services, project enquiries, and next steps. What would you like to know?"
-        : "Welcome! I can help you explore this website, its consulting topics, and SPS NEXUS TECH services. What would you like to know?",
-    },
+    { id: 1, role: "assistant", text: welcomeMessages[variant] },
   ]);
   const [nextId, setNextId] = useState(2);
   const endRef = useRef<HTMLDivElement>(null);
@@ -248,44 +49,97 @@ export default function SiteAssistant({ variant = "site" }: { variant?: Variant 
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-  }, [messages, isOpen]);
+  }, [messages, isOpen, isLoading]);
 
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
 
-  function sendMessage(value: string) {
+  async function sendMessage(value: string) {
     const question = value.trim();
-    if (!question) return;
+    if (!question || isLoading) return;
 
-    const reply = findReply(question, variant);
+    const visitorId = nextId;
+    const assistantId = nextId + 1;
+    const previousQuestions = messages
+      .filter((message) => message.role === "visitor")
+      .slice(-2)
+      .map((message) => message.text);
+
     setMessages((current) => [
       ...current,
-      { id: nextId, role: "visitor", text: question },
-      { id: nextId + 1, role: "assistant", text: reply.text, links: reply.links },
+      { id: visitorId, role: "visitor", text: question },
     ]);
     setNextId((current) => current + 2);
     setInput("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question,
+          variant,
+          context: previousQuestions,
+        }),
+      });
+      const data = (await response.json()) as ChatResponse;
+
+      if (!response.ok || !data.answer) {
+        throw new Error(data.error || "The assistant could not retrieve an answer.");
+      }
+
+      setMessages((current) => [
+        ...current,
+        {
+          id: assistantId,
+          role: "assistant",
+          text: data.answer || "I couldn't retrieve an answer.",
+          links: data.sources || [],
+        },
+      ]);
+    } catch {
+      setMessages((current) => [
+        ...current,
+        {
+          id: assistantId,
+          role: "assistant",
+          text: "I'm having trouble retrieving that answer right now. Please try again, or contact Abhishek directly.",
+          links: [{ label: "Email Abhishek", href: "mailto:abhishek@iabhishekshukla.com" }],
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    sendMessage(input);
+    void sendMessage(input);
   }
 
-  const title = variant === "sps" ? "SPS NEXUS TECH Assistant" : "Website Assistant";
+  const title = variant === "sps" ? "SPS NEXUS TECH Assistant" : "Abhishek's Website Assistant";
 
   return (
     <div className="fixed bottom-4 right-4 z-[90] font-sans sm:bottom-6 sm:right-6">
       {isOpen && (
         <section
           aria-label={title}
-          className="mb-3 flex h-[min(620px,calc(100dvh-112px))] w-[min(390px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-slate-950/20"
+          className="mb-3 flex h-[min(650px,calc(100dvh-112px))] w-[min(400px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-slate-950/20"
         >
-          <header className="flex items-center justify-between gap-3 bg-slate-950 px-5 py-4 text-white">
-            <div className="min-w-0">
-              <p className="truncate text-sm font-semibold">{title}</p>
-              <p className="mt-1 text-xs text-slate-300">Self-hosted · No chatbot subscription</p>
+          <header className="flex items-center justify-between gap-3 bg-slate-950 px-4 py-4 text-white">
+            <div className="flex min-w-0 items-center gap-3">
+              <img
+                src="/profile_navy_chin.png"
+                alt="Abhishek Shukla"
+                className="h-11 w-11 shrink-0 rounded-full border-2 border-white/30 object-cover object-top"
+                loading="lazy"
+              />
+              <div className="min-w-0">
+                <p className="truncate text-sm font-semibold">{title}</p>
+                <p className="mt-1 text-xs text-slate-300">How can I help you?</p>
+              </div>
             </div>
             <button
               type="button"
@@ -300,11 +154,20 @@ export default function SiteAssistant({ variant = "site" }: { variant?: Variant 
           <div className="flex-1 space-y-3 overflow-y-auto bg-slate-50 px-4 py-4" aria-live="polite">
             {messages.map((message) => (
               <div key={message.id} className={message.role === "visitor" ? "flex justify-end" : "flex justify-start"}>
+                {message.role === "assistant" && (
+                  <img
+                    src="/profile_navy_chin.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="mr-2 mt-1 h-7 w-7 shrink-0 rounded-full object-cover object-top"
+                    loading="lazy"
+                  />
+                )}
                 <div
                   className={
                     message.role === "visitor"
                       ? "max-w-[88%] rounded-2xl rounded-br-md bg-slate-900 px-4 py-3 text-sm leading-6 text-white"
-                      : "max-w-[92%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-6 text-slate-700 shadow-sm"
+                      : "max-w-[88%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-6 text-slate-700 shadow-sm"
                   }
                 >
                   <p className="whitespace-pre-wrap">{message.text}</p>
@@ -325,13 +188,27 @@ export default function SiteAssistant({ variant = "site" }: { variant?: Variant 
               </div>
             ))}
 
-            {messages.length === 1 && (
+            {isLoading && (
+              <div className="flex items-center justify-start">
+                <img
+                  src="/profile_navy_chin.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="mr-2 h-7 w-7 shrink-0 rounded-full object-cover object-top"
+                />
+                <div className="rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm text-slate-500 shadow-sm">
+                  Checking the website information…
+                </div>
+              </div>
+            )}
+
+            {messages.length === 1 && !isLoading && (
               <div className="flex flex-wrap gap-2 pt-1">
                 {suggestions[variant].map((suggestion) => (
                   <button
                     key={suggestion}
                     type="button"
-                    onClick={() => sendMessage(suggestion)}
+                    onClick={() => void sendMessage(suggestion)}
                     className="rounded-full border border-slate-200 bg-white px-3 py-2 text-left text-xs font-medium text-slate-700 transition hover:border-sky-300 hover:bg-sky-50"
                   >
                     {suggestion}
@@ -353,18 +230,16 @@ export default function SiteAssistant({ variant = "site" }: { variant?: Variant 
                 autoComplete="off"
                 className="min-w-0 flex-1 bg-transparent px-2 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400"
                 maxLength={500}
+                disabled={isLoading}
               />
               <button
                 type="submit"
-                disabled={!input.trim()}
+                disabled={!input.trim() || isLoading}
                 className="rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
               >
-                Send
+                {isLoading ? "…" : "Send"}
               </button>
             </div>
-            <p className="px-1 pt-2 text-[11px] leading-4 text-slate-500">
-              Answers use prepared website information. Messages stay in this browser session.
-            </p>
           </form>
         </section>
       )}
@@ -375,10 +250,16 @@ export default function SiteAssistant({ variant = "site" }: { variant?: Variant 
           onClick={() => setIsOpen((open) => !open)}
           aria-expanded={isOpen}
           aria-label={isOpen ? "Close website assistant" : "Open website assistant"}
-          className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3.5 text-sm font-semibold text-white shadow-xl shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-sky-200"
+          className="inline-flex items-center gap-2 rounded-full bg-slate-950 py-2 pl-2 pr-5 text-sm font-semibold text-white shadow-xl shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-sky-200"
         >
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-300 text-slate-950" aria-hidden="true">✦</span>
-          {isOpen ? "Close chat" : "Chat with us"}
+          <img
+            src="/profile_navy_chin.png"
+            alt=""
+            aria-hidden="true"
+            className="h-9 w-9 rounded-full border border-white/30 object-cover object-top"
+            loading="lazy"
+          />
+          {isOpen ? "Close chat" : "Chat with Abhishek's Assistant"}
         </button>
       </div>
     </div>
