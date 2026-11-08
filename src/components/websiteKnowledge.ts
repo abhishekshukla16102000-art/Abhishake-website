@@ -298,22 +298,26 @@ function getRelevantWords(query: string): string[] {
     query
       .toLowerCase()
       .replace(/&/g, " and ")
-      .replace(/[^a-z0-9\\s]/g, " ")
-      .split(/\\s+/)
+      .replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/)
       .filter((word) => word.length > 1 && !stopWords.has(word))
       .map((word) => aliases[word] ?? word)
   ));
 }
 
 function normalise(value: string): string {
-  return value.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9\\s]/g, " ").replace(/\\s+/g, " ").trim();
+  return value.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
 }
 
 export function searchWebsite(query: string, audience: "general" | "sps") {
   const words = getRelevantWords(query);
   if (!words.length) return [];
 
-  const documents = websiteKnowledge.map((passage) => ({
+  const eligiblePassages = audience === "sps"
+    ? websiteKnowledge.filter((passage) => passage.audience === "sps")
+    : websiteKnowledge;
+
+  const documents = eligiblePassages.map((passage) => ({
     passage,
     titleWords: new Set(getRelevantWords(passage.title)),
     tagWords: new Set(getRelevantWords(passage.tags.join(" "))),
@@ -335,28 +339,26 @@ export function searchWebsite(query: string, audience: "general" | "sps") {
     for (const word of words) {
       const idf = 1 + Math.log((documents.length + 1) / ((documentFrequency.get(word) ?? 0) + 1));
       let fieldScore = 0;
-      if (doc.titleWords.has(word)) fieldScore += 4.5;
-      if (doc.tagWords.has(word)) fieldScore += 3.5;
-      if (doc.bodyWords.has(word)) fieldScore += 1.1;
+      if (doc.titleWords.has(word)) fieldScore += 5.5;
+      if (doc.tagWords.has(word)) fieldScore += 4;
+      if (doc.bodyWords.has(word)) fieldScore += 1.3;
       if (fieldScore > 0) matches += 1;
       score += fieldScore * idf;
     }
 
-    const phrases = doc.passage.tags.filter((tag) => {
+    const phraseMatches = doc.passage.tags.filter((tag) => {
       const normalTag = normalise(tag);
       return normalTag.length > 3 && question.includes(normalTag);
     });
-    if (phrases.length) score += Math.min(phrases.length, 3) * 5.5;
-    if (question.length > 7 && doc.allText.includes(question)) score += 8;
-    if (audience === "sps" && doc.passage.audience === "sps") score *= 1.15;
+    if (phraseMatches.length) score += Math.min(phraseMatches.length, 3) * 6;
+    if (question.length > 7 && doc.allText.includes(question)) score += 10;
 
     const coverage = matches / Math.max(words.length, 1);
-    score *= 0.55 + coverage * 0.75;
+    score *= 0.5 + coverage * 0.85;
     return { passage: doc.passage, score, coverage };
   });
 
   return ranked
-    .filter((item) => item.score >= 5.5 && item.coverage >= 0.18)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3);
+    .filter((item) => item.score >= 6 && item.coverage >= 0.2)
+    .sort((a, b) => b.score - a.score);
 }
