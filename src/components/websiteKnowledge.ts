@@ -246,12 +246,12 @@ export const websiteKnowledge: WebsitePassage[] = [
     title: "SPS NEXUS TECH — Operating hours and languages",
     href: "/customer-support-outsourcing",
     content: "The SPS NEXUS TECH project brief asks clients to specify operating hours, time zone, languages and coverage days. The website does not make a blanket promise of 24/7 coverage or list confirmed supported languages; these details need to be reviewed and confirmed for each project.",
-    tags: ["24/7", "247", "hours", "operating hours", "shift", "language", "languages", "coverage", "weekend", "time zone"],
+    tags: ["24/7", "247", "hours", "operating hours", "shift", "language", "languages", "English", "Hindi", "coverage", "weekend", "time zone"],
   },
   {
     id: "sps-ai-product-guardrail",
     audience: "sps",
-    title: "SPS NEXUS TECH — Current service scope",
+    title: "SPS NEXUS TECH — Human-led service scope",
     href: "/customer-support-outsourcing",
     content: "The SPS NEXUS TECH customer-support page focuses on traditional, human-led BPO and customer-support services. It does not claim that a finished AI call-centre product is already launched. AI-plus-human partnership ideas on the wider business site are described as a proposed direction to validate with partners, not an existing launched product.",
     tags: ["ai", "chatbot", "automation", "ai human", "ai plus human", "current", "available", "product", "launched", "human led"],
@@ -370,6 +370,6 @@ export function searchWebsite(query: string, audience: "general" | "sps") {
   });
 
   return ranked
-    .filter((item) => item.score >= 6 && item.coverage >= 0.2)
+    .filter((item) => item.score >= 8 && item.coverage >= 0.6)
     .sort((a, b) => b.score - a.score);
 }
