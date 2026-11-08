@@ -230,7 +230,15 @@ export const websiteKnowledge: WebsitePassage[] = [
     title: "SPS NEXUS TECH — Pricing and quotations",
     href: "/customer-support-outsourcing",
     content: "The SPS NEXUS TECH page does not publish a fixed price list. Pricing depends on work type, expected volume, staffing profile, operating hours, training, systems, quality requirements and contract duration. A proposal is prepared after the requirement is understood.",
-    tags: ["price", "pricing", "cost", "rate", "quotation", "quote", "budget", "charges", "fees", "commercial"],
+    tags: ["price", "pricing", "cost", "rate", "quotation", "quote", "budget", "charges", "fees", "commercial", "agent", "staff", "per agent"],
+  },
+  {
+    id: "sps-quotation",
+    audience: "sps",
+    title: "SPS NEXUS TECH — Request a BPO quotation",
+    href: "/customer-support-outsourcing#project-enquiry",
+    content: "To request a quotation, submit the SPS NEXUS TECH project enquiry with your company details, the type of support required, expected call or case volume, operating hours, language needs, and a short description of the process. Pricing is prepared after the requirement and delivery feasibility are reviewed; the website does not publish a fixed per-agent rate.",
+    tags: ["request", "quotation", "quote", "pricing", "inbound", "outbound", "support", "proposal", "enquiry", "form", "per agent"],
   },
   {
     id: "sps-project-process",
@@ -246,12 +254,12 @@ export const websiteKnowledge: WebsitePassage[] = [
     title: "SPS NEXUS TECH — Operating hours and languages",
     href: "/customer-support-outsourcing",
     content: "The SPS NEXUS TECH project brief asks clients to specify operating hours, time zone, languages and coverage days. The website does not make a blanket promise of 24/7 coverage or list confirmed supported languages; these details need to be reviewed and confirmed for each project.",
-    tags: ["24/7", "247", "hours", "operating hours", "shift", "language", "languages", "coverage", "weekend", "time zone"],
+    tags: ["24/7", "247", "hours", "operating hours", "shift", "language", "languages", "English", "Hindi", "support", "guarantee", "coverage", "weekend", "time zone"],
   },
   {
     id: "sps-ai-product-guardrail",
     audience: "sps",
-    title: "SPS NEXUS TECH — Current service scope",
+    title: "SPS NEXUS TECH — Human-led service scope",
     href: "/customer-support-outsourcing",
     content: "The SPS NEXUS TECH customer-support page focuses on traditional, human-led BPO and customer-support services. It does not claim that a finished AI call-centre product is already launched. AI-plus-human partnership ideas on the wider business site are described as a proposed direction to validate with partners, not an existing launched product.",
     tags: ["ai", "chatbot", "automation", "ai human", "ai plus human", "current", "available", "product", "launched", "human led"],
@@ -281,7 +289,7 @@ function getRelevantWords(query: string): string[] {
     "or", "please", "tell", "that", "the", "their", "them", "there", "this", "to",
     "us", "we", "what", "when", "where", "which", "who", "why", "with", "you",
     "your", "about", "would", "should", "could", "our", "more", "same", "much",
-    "many", "some", "any", "also", "looking", "like", "need", "want"
+    "many", "some", "any", "also", "looking", "like", "need", "want", "per", "fixed"
   ]);
   const aliases: Record<string, string> = {
     center: "centre", centers: "centre", centres: "centre", callcenter: "centre",
@@ -311,7 +319,7 @@ function getRelevantWords(query: string): string[] {
       .replace(/&/g, " and ")
       .replace(/[^a-z0-9\s]/g, " ")
       .split(/\s+/)
-      .filter((word) => word.length > 1 && !stopWords.has(word))
+      .filter((word) => word.length > 1 && !/^\d+$/.test(word) && !stopWords.has(word))
       .map((word) => aliases[word] ?? word)
   ));
 }
@@ -370,6 +378,6 @@ export function searchWebsite(query: string, audience: "general" | "sps") {
   });
 
   return ranked
-    .filter((item) => item.score >= 6 && item.coverage >= 0.2)
+    .filter((item) => item.score >= 8 && item.coverage >= 0.6)
     .sort((a, b) => b.score - a.score);
 }

@@ -53,7 +53,7 @@ function makeAnswer(question: string, variant: Variant): ChatMessage {
   const results = searchWebsite(question, variant);
   const best = results[0];
 
-  if (!best || best.score < 8 || best.coverage < 0.24) {
+  if (!best || best.score < 8 || best.coverage < 0.6) {
     return {
       id: 0,
       role: "assistant",
