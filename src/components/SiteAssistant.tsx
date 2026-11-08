@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { FormEvent } from "react";
 
 type Variant = "site" | "sps";
 type LinkItem = { label: string; href: string };
@@ -84,13 +85,6 @@ const spsKnowledge: KnowledgeEntry[] = [
     keys: ["language", "languages", "working hours", "time zone", "timezone", "24/7", "coverage", "weekend", "shift"],
     reply: {
       text: "Languages, operating hours, time-zone coverage, shift patterns, and service levels are confirmed for each project after the requirements and delivery feasibility have been reviewed.",
-      links: [enquiryLink],
-    },
-  },
-  {
-    keys: ["ai", "chatbot", "automation"],
-    reply: {
-      text: "This SPS NEXUS TECH page is focused on traditional, human-led BPO and customer-support services, including calling and customer-query handling. It does not present an AI-plus-human service offer.",
       links: [enquiryLink],
     },
   },
@@ -194,6 +188,13 @@ function normalise(value: string): string {
 function findReply(question: string, variant: Variant): Reply {
   const q = normalise(question);
   const entries = variant === "sps" ? spsKnowledge : siteKnowledge;
+
+  if (variant === "sps" && /\\b(ai|chatbot|automation)\\b/.test(q)) {
+    return {
+      text: "This SPS NEXUS TECH page is focused on traditional, human-led BPO and customer-support services, including calling and customer-query handling. It does not present an AI-plus-human service offer.",
+      links: [enquiryLink],
+    };
+  }
 
   if (/^(hi|hello|hey|good morning|good afternoon|good evening|namaste)$/.test(q)) {
     return {
