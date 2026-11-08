@@ -156,8 +156,8 @@ export const websiteKnowledge: WebsitePassage[] = [
     id: "sps-contact",
     audience: "sps",
     title: "SPS NEXUS TECH — Contact for project enquiries",
-    href: "/customer-support-outsourcing",
-    content: "For a BPO or customer-support project discussion, visitors can use the project enquiry form on the SPS NEXUS TECH page or email Abhishek Shukla at abhishek@iabhishekshukla.com. The form asks for company and contact details, service required, expected calls or cases, required hours and languages, project details and target start date.",
+    href: "/business",
+    content: "For a BPO or customer-support project discussion, visitors can use the project enquiry form on the SPS NEXUS TECH page or contact Abhishek Shukla directly. The business page lists email abhishek@iabhishekshukla.com and phone +91 8860220070. The project enquiry form asks for company and contact details, service required, expected calls or cases, required hours and languages, project details and target start date.",
     tags: ["contact", "email", "reach", "speak", "meeting", "enquiry", "form", "project enquiry", "phone"],
   },
   {
