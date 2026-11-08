@@ -78,7 +78,7 @@ export default function Home() {
         <Collaborations />
       </main>
       <Footer />
-      <SiteAssistant variant="site" />
+      <SiteAssistant variant="general" />
     </>
   );
 }
