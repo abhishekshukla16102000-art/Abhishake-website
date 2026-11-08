@@ -281,7 +281,7 @@ function getRelevantWords(query: string): string[] {
     "or", "please", "tell", "that", "the", "their", "them", "there", "this", "to",
     "us", "we", "what", "when", "where", "which", "who", "why", "with", "you",
     "your", "about", "would", "should", "could", "our", "more", "same", "much",
-    "many", "some", "any", "also", "looking", "like", "need", "want"
+    "many", "some", "any", "also", "looking", "like", "need", "want", "per", "fixed"
   ]);
   const aliases: Record<string, string> = {
     center: "centre", centers: "centre", centres: "centre", callcenter: "centre",
@@ -311,7 +311,7 @@ function getRelevantWords(query: string): string[] {
       .replace(/&/g, " and ")
       .replace(/[^a-z0-9\s]/g, " ")
       .split(/\s+/)
-      .filter((word) => word.length > 1 && !stopWords.has(word))
+      .filter((word) => word.length > 1 && !/^\d+$/.test(word) && !stopWords.has(word))
       .map((word) => aliases[word] ?? word)
   ));
 }
