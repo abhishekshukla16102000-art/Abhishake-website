@@ -75,15 +75,15 @@ function makeAnswer(question: string, variant: Variant): ChatMessage {
     ))
     .slice(0, 2);
 
-  const sources = Array.from(
-    new Map(selected.map(({ passage }) => [
-      passage.href,
-      {
+  const sources: { title: string; href: string }[] = [];
+  for (const { passage } of selected) {
+    if (!sources.some((source) => source.href === passage.href)) {
+      sources.push({
         title: passage.href === "/" ? "Read on the homepage" : "Read more: " + passage.title,
         href: passage.href,
-      },
-    ])).values()
-  );
+      });
+    }
+  }
 
   return {
     id: 0,
