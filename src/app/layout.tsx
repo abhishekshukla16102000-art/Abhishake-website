@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -107,10 +106,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col bg-white text-slate-900 transition-colors duration-300">
         {children}
         <ScrollToTop />
-        <Script
-          src="https://www.chatbotgen.com/v2/chatbots/sps-nexus-tech-website-assistant-qbd2a2o/script.js"
-          strategy="afterInteractive"
-        />
         <Suspense fallback={null}>
           <ServiceModal />
         </Suspense>

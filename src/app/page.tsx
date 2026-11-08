@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SiteAssistant from "@/components/SiteAssistant";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -77,6 +78,7 @@ export default function Home() {
         <Collaborations />
       </main>
       <Footer />
+      <SiteAssistant variant="site" />
     </>
   );
 }

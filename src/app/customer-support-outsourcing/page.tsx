@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SpsBpoEnquiryForm from "@/components/SpsBpoEnquiryForm";
 import SpsFaqAccordion from "@/components/SpsFaqAccordion";
+import SiteAssistant from "@/components/SiteAssistant";
 import { ArrowRight, CheckCircle2, Headset, PhoneCall, Users, ClipboardCheck, Mail, ShoppingBag } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -287,6 +288,7 @@ export default function CustomerSupportOutsourcingPage() {
           </div>
         </div>
       </footer>
+      <SiteAssistant variant="sps" />
     </main>
   );
 }
