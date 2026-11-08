@@ -189,7 +189,7 @@ function findReply(question: string, variant: Variant): Reply {
   const q = normalise(question);
   const entries = variant === "sps" ? spsKnowledge : siteKnowledge;
 
-  if (variant === "sps" && /\\b(ai|chatbot|automation)\\b/.test(q)) {
+  if (variant === "sps" && /(^| )(ai|chatbot|automation)( |$)/.test(q)) {
     return {
       text: "This SPS NEXUS TECH page is focused on traditional, human-led BPO and customer-support services, including calling and customer-query handling. It does not present an AI-plus-human service offer.",
       links: [enquiryLink],
