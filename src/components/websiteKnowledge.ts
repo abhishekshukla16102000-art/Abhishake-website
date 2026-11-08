@@ -153,6 +153,14 @@ export const websiteKnowledge: WebsitePassage[] = [
     tags: ["book", "author", "the bridge you become", "leader others remember", "amazon", "leadership", "reading"],
   },
   {
+    id: "sps-contact",
+    audience: "sps",
+    title: "SPS NEXUS TECH — Contact for project enquiries",
+    href: "/customer-support-outsourcing",
+    content: "For a BPO or customer-support project discussion, visitors can use the project enquiry form on the SPS NEXUS TECH page or email Abhishek Shukla at abhishek@iabhishekshukla.com. The form asks for company and contact details, service required, expected calls or cases, required hours and languages, project details and target start date.",
+    tags: ["contact", "email", "reach", "speak", "meeting", "enquiry", "form", "project enquiry", "phone"],
+  },
+  {
     id: "sps-overview",
     audience: "sps",
     title: "SPS NEXUS TECH — Human-led BPO and customer support",
@@ -292,6 +300,9 @@ function getRelevantWords(query: string): string[] {
     processes: "process", workflows: "workflow", operations: "operation",
     languages: "language", shifts: "shift", hours: "hour",
     certificates: "credential", certifications: "credential",
+    offer: "service", offers: "service", offering: "service", provide: "service", provides: "service",
+    outsource: "outsourcing", outsourced: "outsourcing",
+    hire: "staff", number: "phone", mobile: "phone", based: "location",
   };
 
   return Array.from(new Set(
