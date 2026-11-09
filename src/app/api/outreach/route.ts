@@ -247,7 +247,12 @@ export async function POST(request: Request) {
     try {
       const afterSend = await getRecentSentSummary(accessToken, session.accountId);
       verifiedInSent = afterSend.recipients.has(to);
-      if (action === "send") nextSession.sentToday = afterSend.sentToday;
+      if (action === "send") {
+        nextSession.sentToday = Math.max(
+          afterSend.sentToday,
+          (sentSummary?.sentToday ?? 0) + 1,
+        );
+      }
     } catch {
       // The send response remains the source of truth when the folder read is temporarily unavailable.
     }
