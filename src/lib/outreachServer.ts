@@ -232,7 +232,7 @@ export function extractEmailAddresses(value: unknown) {
   return decoded.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) ?? [];
 }
 
-export async function getRecentSentRecipients(accessToken: string, accountId: string) {
+export async function getRecentSentSummary(accessToken: string, accountId: string) {
   const folders = await zohoApi<Array<Record<string, unknown>>>(
     accessToken,
     `/api/accounts/${encodeURIComponent(accountId)}/folders`,
@@ -247,7 +247,9 @@ export async function getRecentSentRecipients(accessToken: string, accountId: st
     throw new Error("Zoho Sent folder could not be located; duplicate protection is unavailable.");
   }
 
-  const sent = new Set<string>();
+  const recipients = new Set<string>();
+  let sentToday = 0;
+  const today = indiaCalendarDay();
   for (const start of [1, 201, 401]) {
     const params = new URLSearchParams({
       folderId: sentFolder.folderId,
@@ -264,12 +266,16 @@ export async function getRecentSentRecipients(accessToken: string, accountId: st
     const rows = Array.isArray(page.data) ? page.data : [];
     for (const row of rows) {
       for (const address of extractEmailAddresses(row.toAddress)) {
-        sent.add(address.toLowerCase());
+        recipients.add(address.toLowerCase());
+      }
+      const sentAt = Number(row.sentDateInGMT ?? row.receivedTime);
+      if (Number.isFinite(sentAt) && sentAt > 0 && indiaCalendarDay(sentAt) === today) {
+        sentToday += 1;
       }
     }
     if (rows.length < 200) break;
   }
-  return sent;
+  return { recipients, sentToday };
 }
 
 export async function sendZohoMessage(args: {
