@@ -7,7 +7,7 @@ import {
   encryptSession,
   cookieHeader,
   getCookie,
-  getRecentSentRecipients,
+  getRecentSentSummary,
   indiaCalendarDay,
   isOutreachAdmin,
   refreshZohoAccessToken,
@@ -106,19 +106,19 @@ export async function GET(request: Request) {
 
   let zohoConnected = false;
   let connectionMessage = "Connect Zoho Mail to continue.";
+  let sentToday = 0;
   if (session) {
     try {
       const accessToken = await refreshZohoAccessToken(session.refreshToken);
       await zohoApi(accessToken, `/api/accounts/${encodeURIComponent(session.accountId)}`);
+      const sentSummary = await getRecentSentSummary(accessToken, session.accountId);
+      sentToday = sentSummary.sentToday;
       zohoConnected = true;
       connectionMessage = "Zoho Mail connection verified.";
     } catch {
       connectionMessage = "Zoho connection needs to be re-authorised.";
     }
   }
-
-  const today = indiaCalendarDay();
-  const sentToday = session?.sentDay === today ? session.sentToday : 0;
   const cooldownRemaining = session?.lastExternalSendAt
     ? Math.max(0, OUTREACH_SEND_COOLDOWN_MS - (Date.now() - session.lastExternalSendAt))
     : 0;
@@ -210,10 +210,14 @@ export async function POST(request: Request) {
   try {
     const accessToken = await refreshZohoAccessToken(session.refreshToken);
 
+    let sentSummary: Awaited<ReturnType<typeof getRecentSentSummary>> | null = null;
     if (action === "send") {
-      const sentRecipients = await getRecentSentRecipients(accessToken, session.accountId);
-      if (sentRecipients.has(to)) {
+      sentSummary = await getRecentSentSummary(accessToken, session.accountId);
+      if (sentSummary.recipients.has(to)) {
         return jsonError("This recipient already appears in your recent Zoho Sent folder. Duplicate sending was blocked.", 409);
+      }
+      if (sentSummary.sentToday >= OUTREACH_DAILY_LIMIT) {
+        return jsonError(`The controlled limit of ${OUTREACH_DAILY_LIMIT} external messages per India calendar day has been reached based on your Zoho Sent folder.`, 429);
       }
     }
 
@@ -241,8 +245,9 @@ export async function POST(request: Request) {
 
     let verifiedInSent = false;
     try {
-      const afterSend = await getRecentSentRecipients(accessToken, session.accountId);
-      verifiedInSent = afterSend.has(to);
+      const afterSend = await getRecentSentSummary(accessToken, session.accountId);
+      verifiedInSent = afterSend.recipients.has(to);
+      if (action === "send") nextSession.sentToday = afterSend.sentToday;
     } catch {
       // The send response remains the source of truth when the folder read is temporarily unavailable.
     }
