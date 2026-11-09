@@ -9,8 +9,6 @@ import {
   encryptSession,
   getCookie,
   getZohoAccountId,
-  refreshZohoAccessToken,
-  zohoApi,
   type OutreachSession,
 } from "@/lib/outreachServer";
 
@@ -59,7 +57,6 @@ export async function GET(request: Request) {
       client_id: clientId,
       client_secret: clientSecret,
       redirect_uri: redirectUri,
-      scope: "ZohoMail.accounts.READ",
     });
 
     const tokenResponse = await fetch(`${ZOHO_ACCOUNTS_BASE_URL}/oauth/v2/token`, {
