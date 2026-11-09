@@ -27,6 +27,15 @@ function returnToAdmin(request: Request, state: string) {
   return url;
 }
 
+function redirectWithCookies(location: URL, cookies: string[] = []) {
+  const headers = new Headers({
+    Location: location.toString(),
+    "Cache-Control": "no-store",
+  });
+  for (const cookie of cookies) headers.append("Set-Cookie", cookie);
+  return new Response(null, { status: 303, headers });
+}
+
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const storedState = getCookie(request, ZOHO_STATE_COOKIE);
@@ -34,15 +43,15 @@ export async function GET(request: Request) {
   const code = url.searchParams.get("code") ?? "";
 
   if (!storedState || !returnedState || !sameState(storedState, returnedState)) {
-    const response = Response.redirect(returnToAdmin(request, "state-error"), 303);
-    response.headers.append("Set-Cookie", clearCookieHeader(ZOHO_STATE_COOKIE));
-    return response;
+    return redirectWithCookies(returnToAdmin(request, "state-error"), [
+      clearCookieHeader(ZOHO_STATE_COOKIE),
+    ]);
   }
 
   if (url.searchParams.has("error") || !code) {
-    const response = Response.redirect(returnToAdmin(request, "denied"), 303);
-    response.headers.append("Set-Cookie", clearCookieHeader(ZOHO_STATE_COOKIE));
-    return response;
+    return redirectWithCookies(returnToAdmin(request, "denied"), [
+      clearCookieHeader(ZOHO_STATE_COOKIE),
+    ]);
   }
 
   try {
@@ -84,18 +93,13 @@ export async function GET(request: Request) {
       lastExternalSendAt: 0,
     };
 
-    const response = Response.redirect(returnToAdmin(request, "connected"), 303);
-    response.headers.append(
-      "Set-Cookie",
+    return redirectWithCookies(returnToAdmin(request, "connected"), [
       cookieHeader(ZOHO_SESSION_COOKIE, encryptSession(session), 60 * 60 * 24 * 30),
-    );
-    response.headers.append("Set-Cookie", clearCookieHeader(ZOHO_STATE_COOKIE));
-    response.headers.set("Cache-Control", "no-store");
-    return response;
+      clearCookieHeader(ZOHO_STATE_COOKIE),
+    ]);
   } catch {
-    const response = Response.redirect(returnToAdmin(request, "error"), 303);
-    response.headers.append("Set-Cookie", clearCookieHeader(ZOHO_STATE_COOKIE));
-    response.headers.set("Cache-Control", "no-store");
-    return response;
+    return redirectWithCookies(returnToAdmin(request, "error"), [
+      clearCookieHeader(ZOHO_STATE_COOKIE),
+    ]);
   }
 }
