@@ -4,6 +4,7 @@ import {
   OUTREACH_SEND_COOLDOWN_MS,
   ZOHO_SESSION_COOKIE,
   decryptSession,
+  encryptSession,
   cookieHeader,
   getCookie,
   getRecentSentRecipients,
@@ -178,13 +179,13 @@ export async function POST(request: Request) {
   const content = typeof payload.content === "string" ? payload.content.trim().slice(0, 5000) : "";
 
   if (!isEmail(to)) return jsonError("Enter one valid recipient email address.");
-  if (!subject || !content || content.length < 30) return jsonError("Add a subject and complete email body.");
 
   if (action === "test" && to !== OUTREACH_FROM_ADDRESS) {
     return jsonError("The connection test can only be sent to your own SPS NEXUS TECH mailbox.");
   }
 
   if (action === "send") {
+    if (!subject || !content || content.length < 30) return jsonError("Add a subject and complete email body.");
     if (to === OUTREACH_FROM_ADDRESS) return jsonError("Use the self-test action for your own mailbox.");
     if (payload.confirmedBusinessContact !== true) {
       return jsonError("Confirm that this is a publicly listed business contact appropriate for a vendor/service enquiry.");
@@ -261,7 +262,7 @@ export async function POST(request: Request) {
     if (action === "send") {
       response.headers.append(
         "Set-Cookie",
-        cookieHeader(ZOHO_SESSION_COOKIE, (await import("@/lib/outreachServer")).encryptSession(nextSession), 60 * 60 * 24 * 30),
+        cookieHeader(ZOHO_SESSION_COOKIE, encryptSession(nextSession), 60 * 60 * 24 * 30),
       );
     }
     return response;
